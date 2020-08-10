@@ -1,4 +1,4 @@
-build/obj/debug.o: debug.c ../../chibios203/os/rt/include/ch.h \
+build/obj/debug.o: debug.c debug.h ../../chibios203/os/rt/include/ch.h \
  cfg/chconf.h ../../chibios203/os/rt/include/chchecks.h \
  ../../chibios203/os/license/chlicense.h \
  ../../chibios203/os/license/chcustomer.h \
@@ -111,7 +111,9 @@ build/obj/debug.o: debug.c ../../chibios203/os/rt/include/ch.h \
  ../../chibios203/os/hal/ports/STM32/LLD/TIMv1/hal_st_lld.h \
  ../../chibios203/os/hal/include/hal_mmc_spi.h \
  ../../chibios203/os/hal/include/hal_serial_usb.h \
- ../../chibios203/os/hal/lib/streams/chprintf.h debug.h
+ ../../chibios203/os/hal/lib/streams/chprintf.h
+
+debug.h:
 
 ../../chibios203/os/rt/include/ch.h:
 
@@ -346,5 +348,3 @@ cfg/mcuconf.h:
 ../../chibios203/os/hal/include/hal_serial_usb.h:
 
 ../../chibios203/os/hal/lib/streams/chprintf.h:
-
-debug.h:

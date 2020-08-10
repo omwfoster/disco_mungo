@@ -20,6 +20,7 @@
 #include "autogen_fir_coeffs.h"
 #include "mp45dt02_pdm.h"
 
+
 /*
  * This is a periodic thread that does absolutely nothing except flashing
  * a LED.

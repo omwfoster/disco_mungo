@@ -23,88 +23,51 @@
 * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 *******************************************************************************/
-#ifndef _DEBUG_H_
-#define _DEBUG_H_
+
+#ifndef _DEBUG_h_
+#define _DEBUG_h_
 
 #include "ch.h"
 #include "hal.h"
-#include <stdarg.h>
-
-#if 1
-#define PRINT(FMT, ...)                                                     \
-        debugSerialPrint("(%s:%d) " FMT "\n\r", __FILE__, __LINE__, __VA_ARGS__)  
-
-#else
-#define PRINT(FMT, ...)
-#endif
-
-#define PRINT_CRITICAL(FMT, ...)\
-        PRINT("ERROR: " FMT, __VA_ARGS__);                  \
-                                                            \
-        while (1)                                           \
-        {                                                   \
-            BOARD_LED_RED_SET();                            \
-            chThdSleepMilliseconds(500);                    \
-            BOARD_LED_RED_CLEAR();                          \
-            chThdSleepMilliseconds(500);                    \
-            BOARD_LED_RED_SET();                            \
-            chSysHalt("ERROR");                             \
-        }
-
-#define SC_ASSERT(FUNC_CALL)                                \
-    {                                                       \
-        StatusCode _sc = FUNC_CALL;                         \
-        if (_sc != STATUS_OK)                               \
-        {                                                   \
-            PRINT("Error: %s", statusCodeToString(_sc));    \
-            return _sc;                                     \
-        }                                                   \
-    }
-
-#define SC_ASSERT_MSG(FUNC_CALL, FMT, ...)                  \
-    {                                                       \
-        StatusCode _sc = FUNC_CALL;                         \
-        if (_sc != STATUS_OK)                               \
-        {                                                   \
-            PRINT("Error: " FMT, __VA_ARGS__);              \
-            PRINT("Error: %s.", statusCodeToString(_sc));   \
-            return _sc;                                     \
-        }                                                   \
-    }
-
-extern mutex_t serialPrintMtx;
-
-typedef enum 
-{
-    /* Success */
-    STATUS_OK,
-    /* Argument provided to API was bad */
-    STATUS_ERROR_API,
-    /* Callback failed */
-    STATUS_ERROR_CALLBACK,
-    /* Internal error */
-    STATUS_ERROR_INTERNAL,
-    /* Some form of system input was out of expected range. */
-    STATUS_ERROR_EXTERNAL_INPUT,
-    /* OS returned Error */
-    STATUS_ERROR_OS,
-    /* Library returned error */
-    STATUS_ERROR_LIBRARY,
-    /* LWIP Library returned error */
-    STATUS_ERROR_LIBRARY_LWIP,
-    /* Error interfacing with HW */
-    STATUS_ERROR_HW,
-    /* Unexpected timeout */
-    STATUS_ERROR_TIMEOUT,
-    /* Placeholder for bounds checking */
-    STATUS_CODE_ENUM_MAX
-} StatusCode;
-
 
 void debugInit(void);
 void debugShutdown(void);
 void debugSerialPrint(const char * fmt, ...);
-void debugSerialPrintVa(const char *fmt, va_list argList);
-const char* statusCodeToString(StatusCode code);
+
+#if 1
+#define PRINT(FMT, ...)                                                     \
+        debugSerialPrint("(%s:%d) " FMT "\n\r", __FILE__, __LINE__, __VA_ARGS__)  
+#else
+#define PRINT(FMT, ...)
+#endif
+
+#define PRINT_ERROR(FMT, ...)\
+        PRINT("ERROR:" FMT, __VA_ARGS__);                   \
+                                                            \
+        while (1)                                           \
+        {                                                   \
+            LED_RED_SET();                                  \
+            chThdSleepMilliseconds(500);                    \
+            LED_RED_CLEAR();                                \
+            chThdSleepMilliseconds(500);                    \
+            LED_RED_SET();                                  \
+            chSysHalt("ERROR");                             \
+        }
+
+#define LED_ORANGE_SET()    palSetPad(GPIOD, GPIOD_LED3);
+#define LED_ORANGE_CLEAR()  palClearPad(GPIOD, GPIOD_LED3);
+#define LED_ORANGE_TOGGLE() palTogglePad(GPIOD, GPIOD_LED3);
+
+#define LED_GREEN_SET()     palSetPad(GPIOD, GPIOD_LED4);
+#define LED_GREEN_CLEAR()   palClearPad(GPIOD, GPIOD_LED4);
+#define LED_GREEN_TOGGLE()  palTogglePad(GPIOD, GPIOD_LED4);
+
+#define LED_RED_SET()       palSetPad(GPIOD, GPIOD_LED5);
+#define LED_RED_CLEAR()     palClearPad(GPIOD, GPIOD_LED5);
+#define LED_RED_TOGGLE()    palTogglePad(GPIOD, GPIOD_LED5);
+
+#define LED_BLUE_SET()      palSetPad(GPIOD, GPIOD_LED6);
+#define LED_BLUE_CLEAR()    palClearPad(GPIOD, GPIOD_LED6);
+#define LED_BLUE_TOGGLE()   palTogglePad(GPIOD, GPIOD_LED6);
 
 #endif /* Header Guard*/

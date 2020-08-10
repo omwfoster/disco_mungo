@@ -1,0 +1,3509 @@
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"arm_iir_lattice_init_q15.c"
+  14              		.file 1 "c:\\chibistudio\\tools\\gnu tools arm embedded\\9.0 2019q4\\arm-none-eabi\\include\\machi
+  15              		.file 2 "c:\\chibistudio\\tools\\gnu tools arm embedded\\9.0 2019q4\\arm-none-eabi\\include\\sys\\
+  16              		.file 3 "c:\\chibistudio\\tools\\gnu tools arm embedded\\9.0 2019q4\\arm-none-eabi\\include\\sys\\
+  17              		.file 4 "c:\\chibistudio\\tools\\gnu tools arm embedded\\9.0 2019q4\\arm-none-eabi\\include\\sys\\
+  18              		.file 5 "c:\\chibistudio\\tools\\gnu tools arm embedded\\9.0 2019q4\\lib\\gcc\\arm-none-eabi\\9.2.
+  19              		.file 6 "c:\\chibistudio\\tools\\gnu tools arm embedded\\9.0 2019q4\\arm-none-eabi\\include\\sys\\
+  20              		.file 7 "c:\\chibistudio\\tools\\gnu tools arm embedded\\9.0 2019q4\\arm-none-eabi\\include\\math.
+  21              		.file 8 "inc/arm_math.h"
+  22              		.file 9 "DSP/FilteringFunctions/arm_iir_lattice_init_q15.c"
+  23              		.section	.gnu.debuglto_.debug_info,"e",%progbits
+  24              	.Ldebug_info0:
+  25              		.hidden	arm_iir_lattice_init_q15.c.c8784cd1
+  26              		.weak	arm_iir_lattice_init_q15.c.c8784cd1
+  27              	arm_iir_lattice_init_q15.c.c8784cd1:
+  28 0000 540A0000 		.4byte	0xa54
+  29 0004 0400     		.2byte	0x4
+  30 0006 00000000 		.4byte	.Ldebug_abbrev0
+  31 000a 04       		.byte	0x4
+  32 000b 01       		.uleb128 0x1
+  33 000c A3000000 		.4byte	.LASF141
+  34 0010 0C       		.byte	0xc
+  35 0011 C9030000 		.4byte	.LASF142
+  36 0015 26030000 		.4byte	.LASF143
+  37 0019 00000000 		.4byte	.Ldebug_line0
+  38 001d 02       		.uleb128 0x2
+  39 001e 01       		.byte	0x1
+  40 001f 06       		.byte	0x6
+  41 0020 BE010000 		.4byte	.LASF0
+  42 0024 02       		.uleb128 0x2
+  43 0025 01       		.byte	0x1
+  44 0026 08       		.byte	0x8
+  45 0027 87040000 		.4byte	.LASF1
+  46 002b 03       		.uleb128 0x3
+  47 002c 9C020000 		.4byte	.LASF3
+  48 0030 01       		.byte	0x1
+  49 0031 37       		.byte	0x37
+  50 0032 18       		.byte	0x18
+  51 0033 37000000 		.4byte	0x37
+  52 0037 02       		.uleb128 0x2
+  53 0038 02       		.byte	0x2
+  54 0039 05       		.byte	0x5
+  55 003a AA040000 		.4byte	.LASF2
+  56 003e 03       		.uleb128 0x3
+  57 003f 97050000 		.4byte	.LASF4
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 2
+
+
+  58 0043 01       		.byte	0x1
+  59 0044 39       		.byte	0x39
+  60 0045 19       		.byte	0x19
+  61 0046 4A000000 		.4byte	0x4a
+  62 004a 02       		.uleb128 0x2
+  63 004b 02       		.byte	0x2
+  64 004c 07       		.byte	0x7
+  65 004d 50030000 		.4byte	.LASF5
+  66 0051 02       		.uleb128 0x2
+  67 0052 04       		.byte	0x4
+  68 0053 05       		.byte	0x5
+  69 0054 03020000 		.4byte	.LASF6
+  70 0058 03       		.uleb128 0x3
+  71 0059 8B020000 		.4byte	.LASF7
+  72 005d 01       		.byte	0x1
+  73 005e 4F       		.byte	0x4f
+  74 005f 19       		.byte	0x19
+  75 0060 64000000 		.4byte	0x64
+  76 0064 02       		.uleb128 0x2
+  77 0065 04       		.byte	0x4
+  78 0066 07       		.byte	0x7
+  79 0067 07030000 		.4byte	.LASF8
+  80 006b 02       		.uleb128 0x2
+  81 006c 08       		.byte	0x8
+  82 006d 05       		.byte	0x5
+  83 006e B0010000 		.4byte	.LASF9
+  84 0072 02       		.uleb128 0x2
+  85 0073 08       		.byte	0x8
+  86 0074 07       		.byte	0x7
+  87 0075 4B000000 		.4byte	.LASF10
+  88 0079 04       		.uleb128 0x4
+  89 007a 04       		.byte	0x4
+  90 007b 05       		.byte	0x5
+  91 007c 696E7400 		.ascii	"int\000"
+  92 0080 02       		.uleb128 0x2
+  93 0081 04       		.byte	0x4
+  94 0082 07       		.byte	0x7
+  95 0083 E3020000 		.4byte	.LASF11
+  96 0087 03       		.uleb128 0x3
+  97 0088 A8010000 		.4byte	.LASF12
+  98 008c 02       		.byte	0x2
+  99 008d 20       		.byte	0x20
+ 100 008e 13       		.byte	0x13
+ 101 008f 2B000000 		.4byte	0x2b
+ 102 0093 03       		.uleb128 0x3
+ 103 0094 3F020000 		.4byte	.LASF13
+ 104 0098 02       		.byte	0x2
+ 105 0099 24       		.byte	0x24
+ 106 009a 14       		.byte	0x14
+ 107 009b 3E000000 		.4byte	0x3e
+ 108 009f 03       		.uleb128 0x3
+ 109 00a0 5F050000 		.4byte	.LASF14
+ 110 00a4 02       		.byte	0x2
+ 111 00a5 30       		.byte	0x30
+ 112 00a6 14       		.byte	0x14
+ 113 00a7 58000000 		.4byte	0x58
+ 114 00ab 02       		.uleb128 0x2
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 3
+
+
+ 115 00ac 08       		.byte	0x8
+ 116 00ad 04       		.byte	0x4
+ 117 00ae 16040000 		.4byte	.LASF15
+ 118 00b2 03       		.uleb128 0x3
+ 119 00b3 93030000 		.4byte	.LASF16
+ 120 00b7 03       		.byte	0x3
+ 121 00b8 22       		.byte	0x22
+ 122 00b9 19       		.byte	0x19
+ 123 00ba BE000000 		.4byte	0xbe
+ 124 00be 05       		.uleb128 0x5
+ 125 00bf 04       		.byte	0x4
+ 126 00c0 C4000000 		.4byte	0xc4
+ 127 00c4 06       		.uleb128 0x6
+ 128 00c5 58050000 		.4byte	.LASF123
+ 129 00c9 03       		.uleb128 0x3
+ 130 00ca 62040000 		.4byte	.LASF17
+ 131 00ce 04       		.byte	0x4
+ 132 00cf 2C       		.byte	0x2c
+ 133 00d0 0E       		.byte	0xe
+ 134 00d1 51000000 		.4byte	0x51
+ 135 00d5 03       		.uleb128 0x3
+ 136 00d6 7A050000 		.4byte	.LASF18
+ 137 00da 04       		.byte	0x4
+ 138 00db 72       		.byte	0x72
+ 139 00dc 0E       		.byte	0xe
+ 140 00dd 51000000 		.4byte	0x51
+ 141 00e1 07       		.uleb128 0x7
+ 142 00e2 9B030000 		.4byte	.LASF19
+ 143 00e6 05       		.byte	0x5
+ 144 00e7 5E01     		.2byte	0x15e
+ 145 00e9 17       		.byte	0x17
+ 146 00ea 80000000 		.4byte	0x80
+ 147 00ee 08       		.uleb128 0x8
+ 148 00ef 04       		.byte	0x4
+ 149 00f0 04       		.byte	0x4
+ 150 00f1 A6       		.byte	0xa6
+ 151 00f2 03       		.byte	0x3
+ 152 00f3 10010000 		.4byte	0x110
+ 153 00f7 09       		.uleb128 0x9
+ 154 00f8 8D030000 		.4byte	.LASF20
+ 155 00fc 04       		.byte	0x4
+ 156 00fd A8       		.byte	0xa8
+ 157 00fe 0C       		.byte	0xc
+ 158 00ff E1000000 		.4byte	0xe1
+ 159 0103 09       		.uleb128 0x9
+ 160 0104 F0020000 		.4byte	.LASF21
+ 161 0108 04       		.byte	0x4
+ 162 0109 A9       		.byte	0xa9
+ 163 010a 13       		.byte	0x13
+ 164 010b 10010000 		.4byte	0x110
+ 165 010f 00       		.byte	0
+ 166 0110 0A       		.uleb128 0xa
+ 167 0111 24000000 		.4byte	0x24
+ 168 0115 20010000 		.4byte	0x120
+ 169 0119 0B       		.uleb128 0xb
+ 170 011a 80000000 		.4byte	0x80
+ 171 011e 03       		.byte	0x3
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 4
+
+
+ 172 011f 00       		.byte	0
+ 173 0120 0C       		.uleb128 0xc
+ 174 0121 08       		.byte	0x8
+ 175 0122 04       		.byte	0x4
+ 176 0123 A3       		.byte	0xa3
+ 177 0124 09       		.byte	0x9
+ 178 0125 44010000 		.4byte	0x144
+ 179 0129 0D       		.uleb128 0xd
+ 180 012a 50050000 		.4byte	.LASF22
+ 181 012e 04       		.byte	0x4
+ 182 012f A5       		.byte	0xa5
+ 183 0130 07       		.byte	0x7
+ 184 0131 79000000 		.4byte	0x79
+ 185 0135 00       		.byte	0
+ 186 0136 0D       		.uleb128 0xd
+ 187 0137 BB050000 		.4byte	.LASF23
+ 188 013b 04       		.byte	0x4
+ 189 013c AA       		.byte	0xaa
+ 190 013d 05       		.byte	0x5
+ 191 013e EE000000 		.4byte	0xee
+ 192 0142 04       		.byte	0x4
+ 193 0143 00       		.byte	0
+ 194 0144 03       		.uleb128 0x3
+ 195 0145 D2040000 		.4byte	.LASF24
+ 196 0149 04       		.byte	0x4
+ 197 014a AB       		.byte	0xab
+ 198 014b 03       		.byte	0x3
+ 199 014c 20010000 		.4byte	0x120
+ 200 0150 03       		.uleb128 0x3
+ 201 0151 71060000 		.4byte	.LASF25
+ 202 0155 04       		.byte	0x4
+ 203 0156 AF       		.byte	0xaf
+ 204 0157 1B       		.byte	0x1b
+ 205 0158 B2000000 		.4byte	0xb2
+ 206 015c 0E       		.uleb128 0xe
+ 207 015d 04       		.byte	0x4
+ 208 015e 05       		.uleb128 0x5
+ 209 015f 04       		.byte	0x4
+ 210 0160 64010000 		.4byte	0x164
+ 211 0164 02       		.uleb128 0x2
+ 212 0165 01       		.byte	0x1
+ 213 0166 08       		.byte	0x8
+ 214 0167 89050000 		.4byte	.LASF26
+ 215 016b 0F       		.uleb128 0xf
+ 216 016c 64010000 		.4byte	0x164
+ 217 0170 03       		.uleb128 0x3
+ 218 0171 D1050000 		.4byte	.LASF27
+ 219 0175 06       		.byte	0x6
+ 220 0176 16       		.byte	0x16
+ 221 0177 19       		.byte	0x19
+ 222 0178 64000000 		.4byte	0x64
+ 223 017c 10       		.uleb128 0x10
+ 224 017d AE020000 		.4byte	.LASF32
+ 225 0181 18       		.byte	0x18
+ 226 0182 06       		.byte	0x6
+ 227 0183 2F       		.byte	0x2f
+ 228 0184 08       		.byte	0x8
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 5
+
+
+ 229 0185 D6010000 		.4byte	0x1d6
+ 230 0189 0D       		.uleb128 0xd
+ 231 018a A8050000 		.4byte	.LASF28
+ 232 018e 06       		.byte	0x6
+ 233 018f 31       		.byte	0x31
+ 234 0190 13       		.byte	0x13
+ 235 0191 D6010000 		.4byte	0x1d6
+ 236 0195 00       		.byte	0
+ 237 0196 11       		.uleb128 0x11
+ 238 0197 5F6B00   		.ascii	"_k\000"
+ 239 019a 06       		.byte	0x6
+ 240 019b 32       		.byte	0x32
+ 241 019c 07       		.byte	0x7
+ 242 019d 79000000 		.4byte	0x79
+ 243 01a1 04       		.byte	0x4
+ 244 01a2 0D       		.uleb128 0xd
+ 245 01a3 3B050000 		.4byte	.LASF29
+ 246 01a7 06       		.byte	0x6
+ 247 01a8 32       		.byte	0x32
+ 248 01a9 0B       		.byte	0xb
+ 249 01aa 79000000 		.4byte	0x79
+ 250 01ae 08       		.byte	0x8
+ 251 01af 0D       		.uleb128 0xd
+ 252 01b0 96020000 		.4byte	.LASF30
+ 253 01b4 06       		.byte	0x6
+ 254 01b5 32       		.byte	0x32
+ 255 01b6 14       		.byte	0x14
+ 256 01b7 79000000 		.4byte	0x79
+ 257 01bb 0C       		.byte	0xc
+ 258 01bc 0D       		.uleb128 0xd
+ 259 01bd 2F060000 		.4byte	.LASF31
+ 260 01c1 06       		.byte	0x6
+ 261 01c2 32       		.byte	0x32
+ 262 01c3 1B       		.byte	0x1b
+ 263 01c4 79000000 		.4byte	0x79
+ 264 01c8 10       		.byte	0x10
+ 265 01c9 11       		.uleb128 0x11
+ 266 01ca 5F7800   		.ascii	"_x\000"
+ 267 01cd 06       		.byte	0x6
+ 268 01ce 33       		.byte	0x33
+ 269 01cf 0B       		.byte	0xb
+ 270 01d0 DC010000 		.4byte	0x1dc
+ 271 01d4 14       		.byte	0x14
+ 272 01d5 00       		.byte	0
+ 273 01d6 05       		.uleb128 0x5
+ 274 01d7 04       		.byte	0x4
+ 275 01d8 7C010000 		.4byte	0x17c
+ 276 01dc 0A       		.uleb128 0xa
+ 277 01dd 70010000 		.4byte	0x170
+ 278 01e1 EC010000 		.4byte	0x1ec
+ 279 01e5 0B       		.uleb128 0xb
+ 280 01e6 80000000 		.4byte	0x80
+ 281 01ea 00       		.byte	0
+ 282 01eb 00       		.byte	0
+ 283 01ec 10       		.uleb128 0x10
+ 284 01ed D5020000 		.4byte	.LASF33
+ 285 01f1 24       		.byte	0x24
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 6
+
+
+ 286 01f2 06       		.byte	0x6
+ 287 01f3 37       		.byte	0x37
+ 288 01f4 08       		.byte	0x8
+ 289 01f5 6F020000 		.4byte	0x26f
+ 290 01f9 0D       		.uleb128 0xd
+ 291 01fa 9F010000 		.4byte	.LASF34
+ 292 01fe 06       		.byte	0x6
+ 293 01ff 39       		.byte	0x39
+ 294 0200 09       		.byte	0x9
+ 295 0201 79000000 		.4byte	0x79
+ 296 0205 00       		.byte	0
+ 297 0206 0D       		.uleb128 0xd
+ 298 0207 8E050000 		.4byte	.LASF35
+ 299 020b 06       		.byte	0x6
+ 300 020c 3A       		.byte	0x3a
+ 301 020d 09       		.byte	0x9
+ 302 020e 79000000 		.4byte	0x79
+ 303 0212 04       		.byte	0x4
+ 304 0213 0D       		.uleb128 0xd
+ 305 0214 D6010000 		.4byte	.LASF36
+ 306 0218 06       		.byte	0x6
+ 307 0219 3B       		.byte	0x3b
+ 308 021a 09       		.byte	0x9
+ 309 021b 79000000 		.4byte	0x79
+ 310 021f 08       		.byte	0x8
+ 311 0220 0D       		.uleb128 0xd
+ 312 0221 C1060000 		.4byte	.LASF37
+ 313 0225 06       		.byte	0x6
+ 314 0226 3C       		.byte	0x3c
+ 315 0227 09       		.byte	0x9
+ 316 0228 79000000 		.4byte	0x79
+ 317 022c 0C       		.byte	0xc
+ 318 022d 0D       		.uleb128 0xd
+ 319 022e 29040000 		.4byte	.LASF38
+ 320 0232 06       		.byte	0x6
+ 321 0233 3D       		.byte	0x3d
+ 322 0234 09       		.byte	0x9
+ 323 0235 79000000 		.4byte	0x79
+ 324 0239 10       		.byte	0x10
+ 325 023a 0D       		.uleb128 0xd
+ 326 023b 02040000 		.4byte	.LASF39
+ 327 023f 06       		.byte	0x6
+ 328 0240 3E       		.byte	0x3e
+ 329 0241 09       		.byte	0x9
+ 330 0242 79000000 		.4byte	0x79
+ 331 0246 14       		.byte	0x14
+ 332 0247 0D       		.uleb128 0xd
+ 333 0248 34060000 		.4byte	.LASF40
+ 334 024c 06       		.byte	0x6
+ 335 024d 3F       		.byte	0x3f
+ 336 024e 09       		.byte	0x9
+ 337 024f 79000000 		.4byte	0x79
+ 338 0253 18       		.byte	0x18
+ 339 0254 0D       		.uleb128 0xd
+ 340 0255 B4040000 		.4byte	.LASF41
+ 341 0259 06       		.byte	0x6
+ 342 025a 40       		.byte	0x40
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 7
+
+
+ 343 025b 09       		.byte	0x9
+ 344 025c 79000000 		.4byte	0x79
+ 345 0260 1C       		.byte	0x1c
+ 346 0261 0D       		.uleb128 0xd
+ 347 0262 88060000 		.4byte	.LASF42
+ 348 0266 06       		.byte	0x6
+ 349 0267 41       		.byte	0x41
+ 350 0268 09       		.byte	0x9
+ 351 0269 79000000 		.4byte	0x79
+ 352 026d 20       		.byte	0x20
+ 353 026e 00       		.byte	0
+ 354 026f 12       		.uleb128 0x12
+ 355 0270 E5010000 		.4byte	.LASF43
+ 356 0274 0801     		.2byte	0x108
+ 357 0276 06       		.byte	0x6
+ 358 0277 4A       		.byte	0x4a
+ 359 0278 08       		.byte	0x8
+ 360 0279 B4020000 		.4byte	0x2b4
+ 361 027d 0D       		.uleb128 0xd
+ 362 027e 7E020000 		.4byte	.LASF44
+ 363 0282 06       		.byte	0x6
+ 364 0283 4B       		.byte	0x4b
+ 365 0284 0A       		.byte	0xa
+ 366 0285 B4020000 		.4byte	0x2b4
+ 367 0289 00       		.byte	0
+ 368 028a 0D       		.uleb128 0xd
+ 369 028b 00000000 		.4byte	.LASF45
+ 370 028f 06       		.byte	0x6
+ 371 0290 4C       		.byte	0x4c
+ 372 0291 09       		.byte	0x9
+ 373 0292 B4020000 		.4byte	0x2b4
+ 374 0296 80       		.byte	0x80
+ 375 0297 13       		.uleb128 0x13
+ 376 0298 C3050000 		.4byte	.LASF46
+ 377 029c 06       		.byte	0x6
+ 378 029d 4E       		.byte	0x4e
+ 379 029e 0A       		.byte	0xa
+ 380 029f 70010000 		.4byte	0x170
+ 381 02a3 0001     		.2byte	0x100
+ 382 02a5 13       		.uleb128 0x13
+ 383 02a6 13020000 		.4byte	.LASF47
+ 384 02aa 06       		.byte	0x6
+ 385 02ab 51       		.byte	0x51
+ 386 02ac 0A       		.byte	0xa
+ 387 02ad 70010000 		.4byte	0x170
+ 388 02b1 0401     		.2byte	0x104
+ 389 02b3 00       		.byte	0
+ 390 02b4 0A       		.uleb128 0xa
+ 391 02b5 5C010000 		.4byte	0x15c
+ 392 02b9 C4020000 		.4byte	0x2c4
+ 393 02bd 0B       		.uleb128 0xb
+ 394 02be 80000000 		.4byte	0x80
+ 395 02c2 1F       		.byte	0x1f
+ 396 02c3 00       		.byte	0
+ 397 02c4 12       		.uleb128 0x12
+ 398 02c5 32040000 		.4byte	.LASF48
+ 399 02c9 9001     		.2byte	0x190
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 8
+
+
+ 400 02cb 06       		.byte	0x6
+ 401 02cc 5D       		.byte	0x5d
+ 402 02cd 08       		.byte	0x8
+ 403 02ce 07030000 		.4byte	0x307
+ 404 02d2 0D       		.uleb128 0xd
+ 405 02d3 A8050000 		.4byte	.LASF28
+ 406 02d7 06       		.byte	0x6
+ 407 02d8 5E       		.byte	0x5e
+ 408 02d9 12       		.byte	0x12
+ 409 02da 07030000 		.4byte	0x307
+ 410 02de 00       		.byte	0
+ 411 02df 0D       		.uleb128 0xd
+ 412 02e0 0B050000 		.4byte	.LASF49
+ 413 02e4 06       		.byte	0x6
+ 414 02e5 5F       		.byte	0x5f
+ 415 02e6 06       		.byte	0x6
+ 416 02e7 79000000 		.4byte	0x79
+ 417 02eb 04       		.byte	0x4
+ 418 02ec 0D       		.uleb128 0xd
+ 419 02ed 86020000 		.4byte	.LASF50
+ 420 02f1 06       		.byte	0x6
+ 421 02f2 61       		.byte	0x61
+ 422 02f3 09       		.byte	0x9
+ 423 02f4 0D030000 		.4byte	0x30d
+ 424 02f8 08       		.byte	0x8
+ 425 02f9 0D       		.uleb128 0xd
+ 426 02fa E5010000 		.4byte	.LASF43
+ 427 02fe 06       		.byte	0x6
+ 428 02ff 62       		.byte	0x62
+ 429 0300 1E       		.byte	0x1e
+ 430 0301 6F020000 		.4byte	0x26f
+ 431 0305 88       		.byte	0x88
+ 432 0306 00       		.byte	0
+ 433 0307 05       		.uleb128 0x5
+ 434 0308 04       		.byte	0x4
+ 435 0309 C4020000 		.4byte	0x2c4
+ 436 030d 0A       		.uleb128 0xa
+ 437 030e 1D030000 		.4byte	0x31d
+ 438 0312 1D030000 		.4byte	0x31d
+ 439 0316 0B       		.uleb128 0xb
+ 440 0317 80000000 		.4byte	0x80
+ 441 031b 1F       		.byte	0x1f
+ 442 031c 00       		.byte	0
+ 443 031d 05       		.uleb128 0x5
+ 444 031e 04       		.byte	0x4
+ 445 031f 23030000 		.4byte	0x323
+ 446 0323 14       		.uleb128 0x14
+ 447 0324 10       		.uleb128 0x10
+ 448 0325 BE040000 		.4byte	.LASF51
+ 449 0329 08       		.byte	0x8
+ 450 032a 06       		.byte	0x6
+ 451 032b 75       		.byte	0x75
+ 452 032c 08       		.byte	0x8
+ 453 032d 4C030000 		.4byte	0x34c
+ 454 0331 0D       		.uleb128 0xd
+ 455 0332 D0010000 		.4byte	.LASF52
+ 456 0336 06       		.byte	0x6
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 9
+
+
+ 457 0337 76       		.byte	0x76
+ 458 0338 11       		.byte	0x11
+ 459 0339 4C030000 		.4byte	0x34c
+ 460 033d 00       		.byte	0
+ 461 033e 0D       		.uleb128 0xd
+ 462 033f 0C000000 		.4byte	.LASF53
+ 463 0343 06       		.byte	0x6
+ 464 0344 77       		.byte	0x77
+ 465 0345 06       		.byte	0x6
+ 466 0346 79000000 		.4byte	0x79
+ 467 034a 04       		.byte	0x4
+ 468 034b 00       		.byte	0
+ 469 034c 05       		.uleb128 0x5
+ 470 034d 04       		.byte	0x4
+ 471 034e 24000000 		.4byte	0x24
+ 472 0352 10       		.uleb128 0x10
+ 473 0353 DD040000 		.4byte	.LASF54
+ 474 0357 68       		.byte	0x68
+ 475 0358 06       		.byte	0x6
+ 476 0359 B5       		.byte	0xb5
+ 477 035a 08       		.byte	0x8
+ 478 035b 95040000 		.4byte	0x495
+ 479 035f 11       		.uleb128 0x11
+ 480 0360 5F7000   		.ascii	"_p\000"
+ 481 0363 06       		.byte	0x6
+ 482 0364 B6       		.byte	0xb6
+ 483 0365 12       		.byte	0x12
+ 484 0366 4C030000 		.4byte	0x34c
+ 485 036a 00       		.byte	0
+ 486 036b 11       		.uleb128 0x11
+ 487 036c 5F7200   		.ascii	"_r\000"
+ 488 036f 06       		.byte	0x6
+ 489 0370 B7       		.byte	0xb7
+ 490 0371 07       		.byte	0x7
+ 491 0372 79000000 		.4byte	0x79
+ 492 0376 04       		.byte	0x4
+ 493 0377 11       		.uleb128 0x11
+ 494 0378 5F7700   		.ascii	"_w\000"
+ 495 037b 06       		.byte	0x6
+ 496 037c B8       		.byte	0xb8
+ 497 037d 07       		.byte	0x7
+ 498 037e 79000000 		.4byte	0x79
+ 499 0382 08       		.byte	0x8
+ 500 0383 0D       		.uleb128 0xd
+ 501 0384 0C020000 		.4byte	.LASF55
+ 502 0388 06       		.byte	0x6
+ 503 0389 B9       		.byte	0xb9
+ 504 038a 09       		.byte	0x9
+ 505 038b 37000000 		.4byte	0x37
+ 506 038f 0C       		.byte	0xc
+ 507 0390 0D       		.uleb128 0xd
+ 508 0391 19030000 		.4byte	.LASF56
+ 509 0395 06       		.byte	0x6
+ 510 0396 BA       		.byte	0xba
+ 511 0397 09       		.byte	0x9
+ 512 0398 37000000 		.4byte	0x37
+ 513 039c 0E       		.byte	0xe
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 10
+
+
+ 514 039d 11       		.uleb128 0x11
+ 515 039e 5F626600 		.ascii	"_bf\000"
+ 516 03a2 06       		.byte	0x6
+ 517 03a3 BB       		.byte	0xbb
+ 518 03a4 11       		.byte	0x11
+ 519 03a5 24030000 		.4byte	0x324
+ 520 03a9 10       		.byte	0x10
+ 521 03aa 0D       		.uleb128 0xd
+ 522 03ab 71000000 		.4byte	.LASF57
+ 523 03af 06       		.byte	0x6
+ 524 03b0 BC       		.byte	0xbc
+ 525 03b1 07       		.byte	0x7
+ 526 03b2 79000000 		.4byte	0x79
+ 527 03b6 18       		.byte	0x18
+ 528 03b7 0D       		.uleb128 0xd
+ 529 03b8 F3010000 		.4byte	.LASF58
+ 530 03bc 06       		.byte	0x6
+ 531 03bd C3       		.byte	0xc3
+ 532 03be 0A       		.byte	0xa
+ 533 03bf 5C010000 		.4byte	0x15c
+ 534 03c3 1C       		.byte	0x1c
+ 535 03c4 0D       		.uleb128 0xd
+ 536 03c5 C5020000 		.4byte	.LASF59
+ 537 03c9 06       		.byte	0x6
+ 538 03ca C5       		.byte	0xc5
+ 539 03cb 1D       		.byte	0x1d
+ 540 03cc 07060000 		.4byte	0x607
+ 541 03d0 20       		.byte	0x20
+ 542 03d1 0D       		.uleb128 0xd
+ 543 03d2 FB030000 		.4byte	.LASF60
+ 544 03d6 06       		.byte	0x6
+ 545 03d7 C7       		.byte	0xc7
+ 546 03d8 1D       		.byte	0x1d
+ 547 03d9 31060000 		.4byte	0x631
+ 548 03dd 24       		.byte	0x24
+ 549 03de 0D       		.uleb128 0xd
+ 550 03df 68050000 		.4byte	.LASF61
+ 551 03e3 06       		.byte	0x6
+ 552 03e4 CA       		.byte	0xca
+ 553 03e5 0D       		.byte	0xd
+ 554 03e6 55060000 		.4byte	0x655
+ 555 03ea 28       		.byte	0x28
+ 556 03eb 0D       		.uleb128 0xd
+ 557 03ec A2060000 		.4byte	.LASF62
+ 558 03f0 06       		.byte	0x6
+ 559 03f1 CB       		.byte	0xcb
+ 560 03f2 09       		.byte	0x9
+ 561 03f3 6F060000 		.4byte	0x66f
+ 562 03f7 2C       		.byte	0x2c
+ 563 03f8 11       		.uleb128 0x11
+ 564 03f9 5F756200 		.ascii	"_ub\000"
+ 565 03fd 06       		.byte	0x6
+ 566 03fe CE       		.byte	0xce
+ 567 03ff 11       		.byte	0x11
+ 568 0400 24030000 		.4byte	0x324
+ 569 0404 30       		.byte	0x30
+ 570 0405 11       		.uleb128 0x11
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 11
+
+
+ 571 0406 5F757000 		.ascii	"_up\000"
+ 572 040a 06       		.byte	0x6
+ 573 040b CF       		.byte	0xcf
+ 574 040c 12       		.byte	0x12
+ 575 040d 4C030000 		.4byte	0x34c
+ 576 0411 38       		.byte	0x38
+ 577 0412 11       		.uleb128 0x11
+ 578 0413 5F757200 		.ascii	"_ur\000"
+ 579 0417 06       		.byte	0x6
+ 580 0418 D0       		.byte	0xd0
+ 581 0419 07       		.byte	0x7
+ 582 041a 79000000 		.4byte	0x79
+ 583 041e 3C       		.byte	0x3c
+ 584 041f 0D       		.uleb128 0xd
+ 585 0420 CA010000 		.4byte	.LASF63
+ 586 0424 06       		.byte	0x6
+ 587 0425 D3       		.byte	0xd3
+ 588 0426 11       		.byte	0x11
+ 589 0427 75060000 		.4byte	0x675
+ 590 042b 40       		.byte	0x40
+ 591 042c 0D       		.uleb128 0xd
+ 592 042d 7A060000 		.4byte	.LASF64
+ 593 0431 06       		.byte	0x6
+ 594 0432 D4       		.byte	0xd4
+ 595 0433 11       		.byte	0x11
+ 596 0434 85060000 		.4byte	0x685
+ 597 0438 43       		.byte	0x43
+ 598 0439 11       		.uleb128 0x11
+ 599 043a 5F6C6200 		.ascii	"_lb\000"
+ 600 043e 06       		.byte	0x6
+ 601 043f D7       		.byte	0xd7
+ 602 0440 11       		.byte	0x11
+ 603 0441 24030000 		.4byte	0x324
+ 604 0445 44       		.byte	0x44
+ 605 0446 0D       		.uleb128 0xd
+ 606 0447 30020000 		.4byte	.LASF65
+ 607 044b 06       		.byte	0x6
+ 608 044c DA       		.byte	0xda
+ 609 044d 07       		.byte	0x7
+ 610 044e 79000000 		.4byte	0x79
+ 611 0452 4C       		.byte	0x4c
+ 612 0453 0D       		.uleb128 0xd
+ 613 0454 57020000 		.4byte	.LASF66
+ 614 0458 06       		.byte	0x6
+ 615 0459 DB       		.byte	0xdb
+ 616 045a 0A       		.byte	0xa
+ 617 045b C9000000 		.4byte	0xc9
+ 618 045f 50       		.byte	0x50
+ 619 0460 0D       		.uleb128 0xd
+ 620 0461 25000000 		.4byte	.LASF67
+ 621 0465 06       		.byte	0x6
+ 622 0466 DE       		.byte	0xde
+ 623 0467 12       		.byte	0x12
+ 624 0468 B3040000 		.4byte	0x4b3
+ 625 046c 54       		.byte	0x54
+ 626 046d 0D       		.uleb128 0xd
+ 627 046e A2030000 		.4byte	.LASF68
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 12
+
+
+ 628 0472 06       		.byte	0x6
+ 629 0473 E2       		.byte	0xe2
+ 630 0474 0C       		.byte	0xc
+ 631 0475 50010000 		.4byte	0x150
+ 632 0479 58       		.byte	0x58
+ 633 047a 0D       		.uleb128 0xd
+ 634 047b E5040000 		.4byte	.LASF69
+ 635 047f 06       		.byte	0x6
+ 636 0480 E4       		.byte	0xe4
+ 637 0481 0E       		.byte	0xe
+ 638 0482 44010000 		.4byte	0x144
+ 639 0486 5C       		.byte	0x5c
+ 640 0487 0D       		.uleb128 0xd
+ 641 0488 C1030000 		.4byte	.LASF70
+ 642 048c 06       		.byte	0x6
+ 643 048d E5       		.byte	0xe5
+ 644 048e 09       		.byte	0x9
+ 645 048f 79000000 		.4byte	0x79
+ 646 0493 64       		.byte	0x64
+ 647 0494 00       		.byte	0
+ 648 0495 15       		.uleb128 0x15
+ 649 0496 79000000 		.4byte	0x79
+ 650 049a B3040000 		.4byte	0x4b3
+ 651 049e 16       		.uleb128 0x16
+ 652 049f B3040000 		.4byte	0x4b3
+ 653 04a3 16       		.uleb128 0x16
+ 654 04a4 5C010000 		.4byte	0x15c
+ 655 04a8 16       		.uleb128 0x16
+ 656 04a9 5E010000 		.4byte	0x15e
+ 657 04ad 16       		.uleb128 0x16
+ 658 04ae 79000000 		.4byte	0x79
+ 659 04b2 00       		.byte	0
+ 660 04b3 05       		.uleb128 0x5
+ 661 04b4 04       		.byte	0x4
+ 662 04b5 BE040000 		.4byte	0x4be
+ 663 04b9 0F       		.uleb128 0xf
+ 664 04ba B3040000 		.4byte	0x4b3
+ 665 04be 17       		.uleb128 0x17
+ 666 04bf 43050000 		.4byte	.LASF71
+ 667 04c3 2804     		.2byte	0x428
+ 668 04c5 06       		.byte	0x6
+ 669 04c6 6002     		.2byte	0x260
+ 670 04c8 08       		.byte	0x8
+ 671 04c9 07060000 		.4byte	0x607
+ 672 04cd 18       		.uleb128 0x18
+ 673 04ce 82050000 		.4byte	.LASF72
+ 674 04d2 06       		.byte	0x6
+ 675 04d3 6202     		.2byte	0x262
+ 676 04d5 07       		.byte	0x7
+ 677 04d6 79000000 		.4byte	0x79
+ 678 04da 00       		.byte	0
+ 679 04db 18       		.uleb128 0x18
+ 680 04dc 1B020000 		.4byte	.LASF73
+ 681 04e0 06       		.byte	0x6
+ 682 04e1 6702     		.2byte	0x267
+ 683 04e3 0B       		.byte	0xb
+ 684 04e4 E1060000 		.4byte	0x6e1
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 13
+
+
+ 685 04e8 04       		.byte	0x4
+ 686 04e9 18       		.uleb128 0x18
+ 687 04ea F7020000 		.4byte	.LASF74
+ 688 04ee 06       		.byte	0x6
+ 689 04ef 6702     		.2byte	0x267
+ 690 04f1 14       		.byte	0x14
+ 691 04f2 E1060000 		.4byte	0x6e1
+ 692 04f6 08       		.byte	0x8
+ 693 04f7 18       		.uleb128 0x18
+ 694 04f8 A6020000 		.4byte	.LASF75
+ 695 04fc 06       		.byte	0x6
+ 696 04fd 6702     		.2byte	0x267
+ 697 04ff 1E       		.byte	0x1e
+ 698 0500 E1060000 		.4byte	0x6e1
+ 699 0504 0C       		.byte	0xc
+ 700 0505 18       		.uleb128 0x18
+ 701 0506 06050000 		.4byte	.LASF76
+ 702 050a 06       		.byte	0x6
+ 703 050b 6902     		.2byte	0x269
+ 704 050d 08       		.byte	0x8
+ 705 050e 79000000 		.4byte	0x79
+ 706 0512 10       		.byte	0x10
+ 707 0513 18       		.uleb128 0x18
+ 708 0514 1A000000 		.4byte	.LASF77
+ 709 0518 06       		.byte	0x6
+ 710 0519 6A02     		.2byte	0x26a
+ 711 051b 08       		.byte	0x8
+ 712 051c E1080000 		.4byte	0x8e1
+ 713 0520 14       		.byte	0x14
+ 714 0521 18       		.uleb128 0x18
+ 715 0522 22050000 		.4byte	.LASF78
+ 716 0526 06       		.byte	0x6
+ 717 0527 6D02     		.2byte	0x26d
+ 718 0529 07       		.byte	0x7
+ 719 052a 79000000 		.4byte	0x79
+ 720 052e 30       		.byte	0x30
+ 721 052f 18       		.uleb128 0x18
+ 722 0530 10050000 		.4byte	.LASF79
+ 723 0534 06       		.byte	0x6
+ 724 0535 6E02     		.2byte	0x26e
+ 725 0537 16       		.byte	0x16
+ 726 0538 F6080000 		.4byte	0x8f6
+ 727 053c 34       		.byte	0x34
+ 728 053d 18       		.uleb128 0x18
+ 729 053e 57040000 		.4byte	.LASF80
+ 730 0542 06       		.byte	0x6
+ 731 0543 7002     		.2byte	0x270
+ 732 0545 07       		.byte	0x7
+ 733 0546 79000000 		.4byte	0x79
+ 734 054a 38       		.byte	0x38
+ 735 054b 18       		.uleb128 0x18
+ 736 054c 18050000 		.4byte	.LASF81
+ 737 0550 06       		.byte	0x6
+ 738 0551 7202     		.2byte	0x272
+ 739 0553 0A       		.byte	0xa
+ 740 0554 07090000 		.4byte	0x907
+ 741 0558 3C       		.byte	0x3c
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 14
+
+
+ 742 0559 18       		.uleb128 0x18
+ 743 055a 85030000 		.4byte	.LASF82
+ 744 055e 06       		.byte	0x6
+ 745 055f 7502     		.2byte	0x275
+ 746 0561 13       		.byte	0x13
+ 747 0562 D6010000 		.4byte	0x1d6
+ 748 0566 40       		.byte	0x40
+ 749 0567 18       		.uleb128 0x18
+ 750 0568 CB020000 		.4byte	.LASF83
+ 751 056c 06       		.byte	0x6
+ 752 056d 7602     		.2byte	0x276
+ 753 056f 07       		.byte	0x7
+ 754 0570 79000000 		.4byte	0x79
+ 755 0574 44       		.byte	0x44
+ 756 0575 18       		.uleb128 0x18
+ 757 0576 BC060000 		.4byte	.LASF84
+ 758 057a 06       		.byte	0x6
+ 759 057b 7702     		.2byte	0x277
+ 760 057d 13       		.byte	0x13
+ 761 057e D6010000 		.4byte	0x1d6
+ 762 0582 48       		.byte	0x48
+ 763 0583 18       		.uleb128 0x18
+ 764 0584 6F040000 		.4byte	.LASF85
+ 765 0588 06       		.byte	0x6
+ 766 0589 7802     		.2byte	0x278
+ 767 058b 14       		.byte	0x14
+ 768 058c 0D090000 		.4byte	0x90d
+ 769 0590 4C       		.byte	0x4c
+ 770 0591 18       		.uleb128 0x18
+ 771 0592 FF020000 		.4byte	.LASF86
+ 772 0596 06       		.byte	0x6
+ 773 0597 7B02     		.2byte	0x27b
+ 774 0599 07       		.byte	0x7
+ 775 059a 79000000 		.4byte	0x79
+ 776 059e 50       		.byte	0x50
+ 777 059f 18       		.uleb128 0x18
+ 778 05a0 4F020000 		.4byte	.LASF87
+ 779 05a4 06       		.byte	0x6
+ 780 05a5 7C02     		.2byte	0x27c
+ 781 05a7 09       		.byte	0x9
+ 782 05a8 5E010000 		.4byte	0x15e
+ 783 05ac 54       		.byte	0x54
+ 784 05ad 18       		.uleb128 0x18
+ 785 05ae 9C040000 		.4byte	.LASF88
+ 786 05b2 06       		.byte	0x6
+ 787 05b3 9F02     		.2byte	0x29f
+ 788 05b5 07       		.byte	0x7
+ 789 05b6 BC080000 		.4byte	0x8bc
+ 790 05ba 58       		.byte	0x58
+ 791 05bb 19       		.uleb128 0x19
+ 792 05bc 32040000 		.4byte	.LASF48
+ 793 05c0 06       		.byte	0x6
+ 794 05c1 A302     		.2byte	0x2a3
+ 795 05c3 13       		.byte	0x13
+ 796 05c4 07030000 		.4byte	0x307
+ 797 05c8 4801     		.2byte	0x148
+ 798 05ca 19       		.uleb128 0x19
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 15
+
+
+ 799 05cb 63030000 		.4byte	.LASF89
+ 800 05cf 06       		.byte	0x6
+ 801 05d0 A402     		.2byte	0x2a4
+ 802 05d2 12       		.byte	0x12
+ 803 05d3 C4020000 		.4byte	0x2c4
+ 804 05d7 4C01     		.2byte	0x14c
+ 805 05d9 19       		.uleb128 0x19
+ 806 05da 67060000 		.4byte	.LASF90
+ 807 05de 06       		.byte	0x6
+ 808 05df A802     		.2byte	0x2a8
+ 809 05e1 0C       		.byte	0xc
+ 810 05e2 1E090000 		.4byte	0x91e
+ 811 05e6 DC02     		.2byte	0x2dc
+ 812 05e8 19       		.uleb128 0x19
+ 813 05e9 FB010000 		.4byte	.LASF91
+ 814 05ed 06       		.byte	0x6
+ 815 05ee AD02     		.2byte	0x2ad
+ 816 05f0 10       		.byte	0x10
+ 817 05f1 A2060000 		.4byte	0x6a2
+ 818 05f5 E002     		.2byte	0x2e0
+ 819 05f7 19       		.uleb128 0x19
+ 820 05f8 E0010000 		.4byte	.LASF92
+ 821 05fc 06       		.byte	0x6
+ 822 05fd AF02     		.2byte	0x2af
+ 823 05ff 0A       		.byte	0xa
+ 824 0600 2A090000 		.4byte	0x92a
+ 825 0604 EC02     		.2byte	0x2ec
+ 826 0606 00       		.byte	0
+ 827 0607 05       		.uleb128 0x5
+ 828 0608 04       		.byte	0x4
+ 829 0609 95040000 		.4byte	0x495
+ 830 060d 15       		.uleb128 0x15
+ 831 060e 79000000 		.4byte	0x79
+ 832 0612 2B060000 		.4byte	0x62b
+ 833 0616 16       		.uleb128 0x16
+ 834 0617 B3040000 		.4byte	0x4b3
+ 835 061b 16       		.uleb128 0x16
+ 836 061c 5C010000 		.4byte	0x15c
+ 837 0620 16       		.uleb128 0x16
+ 838 0621 2B060000 		.4byte	0x62b
+ 839 0625 16       		.uleb128 0x16
+ 840 0626 79000000 		.4byte	0x79
+ 841 062a 00       		.byte	0
+ 842 062b 05       		.uleb128 0x5
+ 843 062c 04       		.byte	0x4
+ 844 062d 6B010000 		.4byte	0x16b
+ 845 0631 05       		.uleb128 0x5
+ 846 0632 04       		.byte	0x4
+ 847 0633 0D060000 		.4byte	0x60d
+ 848 0637 15       		.uleb128 0x15
+ 849 0638 D5000000 		.4byte	0xd5
+ 850 063c 55060000 		.4byte	0x655
+ 851 0640 16       		.uleb128 0x16
+ 852 0641 B3040000 		.4byte	0x4b3
+ 853 0645 16       		.uleb128 0x16
+ 854 0646 5C010000 		.4byte	0x15c
+ 855 064a 16       		.uleb128 0x16
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 16
+
+
+ 856 064b D5000000 		.4byte	0xd5
+ 857 064f 16       		.uleb128 0x16
+ 858 0650 79000000 		.4byte	0x79
+ 859 0654 00       		.byte	0
+ 860 0655 05       		.uleb128 0x5
+ 861 0656 04       		.byte	0x4
+ 862 0657 37060000 		.4byte	0x637
+ 863 065b 15       		.uleb128 0x15
+ 864 065c 79000000 		.4byte	0x79
+ 865 0660 6F060000 		.4byte	0x66f
+ 866 0664 16       		.uleb128 0x16
+ 867 0665 B3040000 		.4byte	0x4b3
+ 868 0669 16       		.uleb128 0x16
+ 869 066a 5C010000 		.4byte	0x15c
+ 870 066e 00       		.byte	0
+ 871 066f 05       		.uleb128 0x5
+ 872 0670 04       		.byte	0x4
+ 873 0671 5B060000 		.4byte	0x65b
+ 874 0675 0A       		.uleb128 0xa
+ 875 0676 24000000 		.4byte	0x24
+ 876 067a 85060000 		.4byte	0x685
+ 877 067e 0B       		.uleb128 0xb
+ 878 067f 80000000 		.4byte	0x80
+ 879 0683 02       		.byte	0x2
+ 880 0684 00       		.byte	0
+ 881 0685 0A       		.uleb128 0xa
+ 882 0686 24000000 		.4byte	0x24
+ 883 068a 95060000 		.4byte	0x695
+ 884 068e 0B       		.uleb128 0xb
+ 885 068f 80000000 		.4byte	0x80
+ 886 0693 00       		.byte	0
+ 887 0694 00       		.byte	0
+ 888 0695 07       		.uleb128 0x7
+ 889 0696 CB040000 		.4byte	.LASF93
+ 890 069a 06       		.byte	0x6
+ 891 069b 1F01     		.2byte	0x11f
+ 892 069d 1A       		.byte	0x1a
+ 893 069e 52030000 		.4byte	0x352
+ 894 06a2 1A       		.uleb128 0x1a
+ 895 06a3 3E060000 		.4byte	.LASF94
+ 896 06a7 0C       		.byte	0xc
+ 897 06a8 06       		.byte	0x6
+ 898 06a9 2301     		.2byte	0x123
+ 899 06ab 08       		.byte	0x8
+ 900 06ac DB060000 		.4byte	0x6db
+ 901 06b0 18       		.uleb128 0x18
+ 902 06b1 A8050000 		.4byte	.LASF28
+ 903 06b5 06       		.byte	0x6
+ 904 06b6 2501     		.2byte	0x125
+ 905 06b8 11       		.byte	0x11
+ 906 06b9 DB060000 		.4byte	0x6db
+ 907 06bd 00       		.byte	0
+ 908 06be 18       		.uleb128 0x18
+ 909 06bf 1F030000 		.4byte	.LASF95
+ 910 06c3 06       		.byte	0x6
+ 911 06c4 2601     		.2byte	0x126
+ 912 06c6 07       		.byte	0x7
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 17
+
+
+ 913 06c7 79000000 		.4byte	0x79
+ 914 06cb 04       		.byte	0x4
+ 915 06cc 18       		.uleb128 0x18
+ 916 06cd C5040000 		.4byte	.LASF96
+ 917 06d1 06       		.byte	0x6
+ 918 06d2 2701     		.2byte	0x127
+ 919 06d4 0B       		.byte	0xb
+ 920 06d5 E1060000 		.4byte	0x6e1
+ 921 06d9 08       		.byte	0x8
+ 922 06da 00       		.byte	0
+ 923 06db 05       		.uleb128 0x5
+ 924 06dc 04       		.byte	0x4
+ 925 06dd A2060000 		.4byte	0x6a2
+ 926 06e1 05       		.uleb128 0x5
+ 927 06e2 04       		.byte	0x4
+ 928 06e3 95060000 		.4byte	0x695
+ 929 06e7 1A       		.uleb128 0x1a
+ 930 06e8 12000000 		.4byte	.LASF97
+ 931 06ec 0E       		.byte	0xe
+ 932 06ed 06       		.byte	0x6
+ 933 06ee 3F01     		.2byte	0x13f
+ 934 06f0 08       		.byte	0x8
+ 935 06f1 20070000 		.4byte	0x720
+ 936 06f5 18       		.uleb128 0x18
+ 937 06f6 4A050000 		.4byte	.LASF98
+ 938 06fa 06       		.byte	0x6
+ 939 06fb 4001     		.2byte	0x140
+ 940 06fd 12       		.byte	0x12
+ 941 06fe 20070000 		.4byte	0x720
+ 942 0702 00       		.byte	0
+ 943 0703 18       		.uleb128 0x18
+ 944 0704 A2050000 		.4byte	.LASF99
+ 945 0708 06       		.byte	0x6
+ 946 0709 4101     		.2byte	0x141
+ 947 070b 12       		.byte	0x12
+ 948 070c 20070000 		.4byte	0x720
+ 949 0710 06       		.byte	0x6
+ 950 0711 18       		.uleb128 0x18
+ 951 0712 CC050000 		.4byte	.LASF100
+ 952 0716 06       		.byte	0x6
+ 953 0717 4201     		.2byte	0x142
+ 954 0719 12       		.byte	0x12
+ 955 071a 4A000000 		.4byte	0x4a
+ 956 071e 0C       		.byte	0xc
+ 957 071f 00       		.byte	0
+ 958 0720 0A       		.uleb128 0xa
+ 959 0721 4A000000 		.4byte	0x4a
+ 960 0725 30070000 		.4byte	0x730
+ 961 0729 0B       		.uleb128 0xb
+ 962 072a 80000000 		.4byte	0x80
+ 963 072e 02       		.byte	0x2
+ 964 072f 00       		.byte	0
+ 965 0730 1B       		.uleb128 0x1b
+ 966 0731 D0       		.byte	0xd0
+ 967 0732 06       		.byte	0x6
+ 968 0733 8002     		.2byte	0x280
+ 969 0735 07       		.byte	0x7
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 18
+
+
+ 970 0736 45080000 		.4byte	0x845
+ 971 073a 18       		.uleb128 0x18
+ 972 073b 22060000 		.4byte	.LASF101
+ 973 073f 06       		.byte	0x6
+ 974 0740 8202     		.2byte	0x282
+ 975 0742 18       		.byte	0x18
+ 976 0743 80000000 		.4byte	0x80
+ 977 0747 00       		.byte	0
+ 978 0748 18       		.uleb128 0x18
+ 979 0749 AE050000 		.4byte	.LASF102
+ 980 074d 06       		.byte	0x6
+ 981 074e 8302     		.2byte	0x283
+ 982 0750 12       		.byte	0x12
+ 983 0751 5E010000 		.4byte	0x15e
+ 984 0755 04       		.byte	0x4
+ 985 0756 18       		.uleb128 0x18
+ 986 0757 78030000 		.4byte	.LASF103
+ 987 075b 06       		.byte	0x6
+ 988 075c 8402     		.2byte	0x284
+ 989 075e 10       		.byte	0x10
+ 990 075f 45080000 		.4byte	0x845
+ 991 0763 08       		.byte	0x8
+ 992 0764 18       		.uleb128 0x18
+ 993 0765 93060000 		.4byte	.LASF104
+ 994 0769 06       		.byte	0x6
+ 995 076a 8502     		.2byte	0x285
+ 996 076c 17       		.byte	0x17
+ 997 076d EC010000 		.4byte	0x1ec
+ 998 0771 24       		.byte	0x24
+ 999 0772 18       		.uleb128 0x18
+ 1000 0773 B6020000 		.4byte	.LASF105
+ 1001 0777 06       		.byte	0x6
+ 1002 0778 8602     		.2byte	0x286
+ 1003 077a 0F       		.byte	0xf
+ 1004 077b 79000000 		.4byte	0x79
+ 1005 077f 48       		.byte	0x48
+ 1006 0780 18       		.uleb128 0x18
+ 1007 0781 EE040000 		.4byte	.LASF106
+ 1008 0785 06       		.byte	0x6
+ 1009 0786 8702     		.2byte	0x287
+ 1010 0788 2C       		.byte	0x2c
+ 1011 0789 72000000 		.4byte	0x72
+ 1012 078d 50       		.byte	0x50
+ 1013 078e 18       		.uleb128 0x18
+ 1014 078f A9060000 		.4byte	.LASF107
+ 1015 0793 06       		.byte	0x6
+ 1016 0794 8802     		.2byte	0x288
+ 1017 0796 1A       		.byte	0x1a
+ 1018 0797 E7060000 		.4byte	0x6e7
+ 1019 079b 58       		.byte	0x58
+ 1020 079c 18       		.uleb128 0x18
+ 1021 079d F9040000 		.4byte	.LASF108
+ 1022 07a1 06       		.byte	0x6
+ 1023 07a2 8902     		.2byte	0x289
+ 1024 07a4 16       		.byte	0x16
+ 1025 07a5 44010000 		.4byte	0x144
+ 1026 07a9 68       		.byte	0x68
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 19
+
+
+ 1027 07aa 18       		.uleb128 0x18
+ 1028 07ab AE060000 		.4byte	.LASF109
+ 1029 07af 06       		.byte	0x6
+ 1030 07b0 8A02     		.2byte	0x28a
+ 1031 07b2 16       		.byte	0x16
+ 1032 07b3 44010000 		.4byte	0x144
+ 1033 07b7 70       		.byte	0x70
+ 1034 07b8 18       		.uleb128 0x18
+ 1035 07b9 79040000 		.4byte	.LASF110
+ 1036 07bd 06       		.byte	0x6
+ 1037 07be 8B02     		.2byte	0x28b
+ 1038 07c0 16       		.byte	0x16
+ 1039 07c1 44010000 		.4byte	0x144
+ 1040 07c5 78       		.byte	0x78
+ 1041 07c6 18       		.uleb128 0x18
+ 1042 07c7 5D060000 		.4byte	.LASF111
+ 1043 07cb 06       		.byte	0x6
+ 1044 07cc 8C02     		.2byte	0x28c
+ 1045 07ce 10       		.byte	0x10
+ 1046 07cf 55080000 		.4byte	0x855
+ 1047 07d3 80       		.byte	0x80
+ 1048 07d4 18       		.uleb128 0x18
+ 1049 07d5 6C030000 		.4byte	.LASF112
+ 1050 07d9 06       		.byte	0x6
+ 1051 07da 8D02     		.2byte	0x28d
+ 1052 07dc 10       		.byte	0x10
+ 1053 07dd 65080000 		.4byte	0x865
+ 1054 07e1 88       		.byte	0x88
+ 1055 07e2 18       		.uleb128 0x18
+ 1056 07e3 D9050000 		.4byte	.LASF113
+ 1057 07e7 06       		.byte	0x6
+ 1058 07e8 8E02     		.2byte	0x28e
+ 1059 07ea 0F       		.byte	0xf
+ 1060 07eb 79000000 		.4byte	0x79
+ 1061 07ef A0       		.byte	0xa0
+ 1062 07f0 18       		.uleb128 0x18
+ 1063 07f1 70020000 		.4byte	.LASF114
+ 1064 07f5 06       		.byte	0x6
+ 1065 07f6 8F02     		.2byte	0x28f
+ 1066 07f8 16       		.byte	0x16
+ 1067 07f9 44010000 		.4byte	0x144
+ 1068 07fd A4       		.byte	0xa4
+ 1069 07fe 18       		.uleb128 0x18
+ 1070 07ff 94000000 		.4byte	.LASF115
+ 1071 0803 06       		.byte	0x6
+ 1072 0804 9002     		.2byte	0x290
+ 1073 0806 16       		.byte	0x16
+ 1074 0807 44010000 		.4byte	0x144
+ 1075 080b AC       		.byte	0xac
+ 1076 080c 18       		.uleb128 0x18
+ 1077 080d 5F020000 		.4byte	.LASF116
+ 1078 0811 06       		.byte	0x6
+ 1079 0812 9102     		.2byte	0x291
+ 1080 0814 16       		.byte	0x16
+ 1081 0815 44010000 		.4byte	0x144
+ 1082 0819 B4       		.byte	0xb4
+ 1083 081a 18       		.uleb128 0x18
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 20
+
+
+ 1084 081b 2B000000 		.4byte	.LASF117
+ 1085 081f 06       		.byte	0x6
+ 1086 0820 9202     		.2byte	0x292
+ 1087 0822 16       		.byte	0x16
+ 1088 0823 44010000 		.4byte	0x144
+ 1089 0827 BC       		.byte	0xbc
+ 1090 0828 18       		.uleb128 0x18
+ 1091 0829 3A000000 		.4byte	.LASF118
+ 1092 082d 06       		.byte	0x6
+ 1093 082e 9302     		.2byte	0x293
+ 1094 0830 16       		.byte	0x16
+ 1095 0831 44010000 		.4byte	0x144
+ 1096 0835 C4       		.byte	0xc4
+ 1097 0836 18       		.uleb128 0x18
+ 1098 0837 A1040000 		.4byte	.LASF119
+ 1099 083b 06       		.byte	0x6
+ 1100 083c 9402     		.2byte	0x294
+ 1101 083e 08       		.byte	0x8
+ 1102 083f 79000000 		.4byte	0x79
+ 1103 0843 CC       		.byte	0xcc
+ 1104 0844 00       		.byte	0
+ 1105 0845 0A       		.uleb128 0xa
+ 1106 0846 64010000 		.4byte	0x164
+ 1107 084a 55080000 		.4byte	0x855
+ 1108 084e 0B       		.uleb128 0xb
+ 1109 084f 80000000 		.4byte	0x80
+ 1110 0853 19       		.byte	0x19
+ 1111 0854 00       		.byte	0
+ 1112 0855 0A       		.uleb128 0xa
+ 1113 0856 64010000 		.4byte	0x164
+ 1114 085a 65080000 		.4byte	0x865
+ 1115 085e 0B       		.uleb128 0xb
+ 1116 085f 80000000 		.4byte	0x80
+ 1117 0863 07       		.byte	0x7
+ 1118 0864 00       		.byte	0
+ 1119 0865 0A       		.uleb128 0xa
+ 1120 0866 64010000 		.4byte	0x164
+ 1121 086a 75080000 		.4byte	0x875
+ 1122 086e 0B       		.uleb128 0xb
+ 1123 086f 80000000 		.4byte	0x80
+ 1124 0873 17       		.byte	0x17
+ 1125 0874 00       		.byte	0
+ 1126 0875 1B       		.uleb128 0x1b
+ 1127 0876 F0       		.byte	0xf0
+ 1128 0877 06       		.byte	0x6
+ 1129 0878 9902     		.2byte	0x299
+ 1130 087a 07       		.byte	0x7
+ 1131 087b 9C080000 		.4byte	0x89c
+ 1132 087f 18       		.uleb128 0x18
+ 1133 0880 22040000 		.4byte	.LASF120
+ 1134 0884 06       		.byte	0x6
+ 1135 0885 9C02     		.2byte	0x29c
+ 1136 0887 1B       		.byte	0x1b
+ 1137 0888 9C080000 		.4byte	0x89c
+ 1138 088c 00       		.byte	0
+ 1139 088d 18       		.uleb128 0x18
+ 1140 088e 54060000 		.4byte	.LASF121
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 21
+
+
+ 1141 0892 06       		.byte	0x6
+ 1142 0893 9D02     		.2byte	0x29d
+ 1143 0895 18       		.byte	0x18
+ 1144 0896 AC080000 		.4byte	0x8ac
+ 1145 089a 78       		.byte	0x78
+ 1146 089b 00       		.byte	0
+ 1147 089c 0A       		.uleb128 0xa
+ 1148 089d 4C030000 		.4byte	0x34c
+ 1149 08a1 AC080000 		.4byte	0x8ac
+ 1150 08a5 0B       		.uleb128 0xb
+ 1151 08a6 80000000 		.4byte	0x80
+ 1152 08aa 1D       		.byte	0x1d
+ 1153 08ab 00       		.byte	0
+ 1154 08ac 0A       		.uleb128 0xa
+ 1155 08ad 80000000 		.4byte	0x80
+ 1156 08b1 BC080000 		.4byte	0x8bc
+ 1157 08b5 0B       		.uleb128 0xb
+ 1158 08b6 80000000 		.4byte	0x80
+ 1159 08ba 1D       		.byte	0x1d
+ 1160 08bb 00       		.byte	0
+ 1161 08bc 1C       		.uleb128 0x1c
+ 1162 08bd F0       		.byte	0xf0
+ 1163 08be 06       		.byte	0x6
+ 1164 08bf 7E02     		.2byte	0x27e
+ 1165 08c1 03       		.byte	0x3
+ 1166 08c2 E1080000 		.4byte	0x8e1
+ 1167 08c6 1D       		.uleb128 0x1d
+ 1168 08c7 43050000 		.4byte	.LASF71
+ 1169 08cb 06       		.byte	0x6
+ 1170 08cc 9502     		.2byte	0x295
+ 1171 08ce 0B       		.byte	0xb
+ 1172 08cf 30070000 		.4byte	0x730
+ 1173 08d3 1D       		.uleb128 0x1d
+ 1174 08d4 80060000 		.4byte	.LASF122
+ 1175 08d8 06       		.byte	0x6
+ 1176 08d9 9E02     		.2byte	0x29e
+ 1177 08db 0B       		.byte	0xb
+ 1178 08dc 75080000 		.4byte	0x875
+ 1179 08e0 00       		.byte	0
+ 1180 08e1 0A       		.uleb128 0xa
+ 1181 08e2 64010000 		.4byte	0x164
+ 1182 08e6 F1080000 		.4byte	0x8f1
+ 1183 08ea 0B       		.uleb128 0xb
+ 1184 08eb 80000000 		.4byte	0x80
+ 1185 08ef 18       		.byte	0x18
+ 1186 08f0 00       		.byte	0
+ 1187 08f1 06       		.uleb128 0x6
+ 1188 08f2 7A000000 		.4byte	.LASF124
+ 1189 08f6 05       		.uleb128 0x5
+ 1190 08f7 04       		.byte	0x4
+ 1191 08f8 F1080000 		.4byte	0x8f1
+ 1192 08fc 1E       		.uleb128 0x1e
+ 1193 08fd 07090000 		.4byte	0x907
+ 1194 0901 16       		.uleb128 0x16
+ 1195 0902 B3040000 		.4byte	0x4b3
+ 1196 0906 00       		.byte	0
+ 1197 0907 05       		.uleb128 0x5
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 22
+
+
+ 1198 0908 04       		.byte	0x4
+ 1199 0909 FC080000 		.4byte	0x8fc
+ 1200 090d 05       		.uleb128 0x5
+ 1201 090e 04       		.byte	0x4
+ 1202 090f D6010000 		.4byte	0x1d6
+ 1203 0913 1E       		.uleb128 0x1e
+ 1204 0914 1E090000 		.4byte	0x91e
+ 1205 0918 16       		.uleb128 0x16
+ 1206 0919 79000000 		.4byte	0x79
+ 1207 091d 00       		.byte	0
+ 1208 091e 05       		.uleb128 0x5
+ 1209 091f 04       		.byte	0x4
+ 1210 0920 24090000 		.4byte	0x924
+ 1211 0924 05       		.uleb128 0x5
+ 1212 0925 04       		.byte	0x4
+ 1213 0926 13090000 		.4byte	0x913
+ 1214 092a 0A       		.uleb128 0xa
+ 1215 092b 95060000 		.4byte	0x695
+ 1216 092f 3A090000 		.4byte	0x93a
+ 1217 0933 0B       		.uleb128 0xb
+ 1218 0934 80000000 		.4byte	0x80
+ 1219 0938 02       		.byte	0x2
+ 1220 0939 00       		.byte	0
+ 1221 093a 1F       		.uleb128 0x1f
+ 1222 093b 6E050000 		.4byte	.LASF125
+ 1223 093f 06       		.byte	0x6
+ 1224 0940 2E03     		.2byte	0x32e
+ 1225 0942 17       		.byte	0x17
+ 1226 0943 B3040000 		.4byte	0x4b3
+ 1227 0947 1F       		.uleb128 0x1f
+ 1228 0948 F7050000 		.4byte	.LASF126
+ 1229 094c 06       		.byte	0x6
+ 1230 094d 2F03     		.2byte	0x32f
+ 1231 094f 1D       		.byte	0x1d
+ 1232 0950 B9040000 		.4byte	0x4b9
+ 1233 0954 02       		.uleb128 0x2
+ 1234 0955 04       		.byte	0x4
+ 1235 0956 04       		.byte	0x4
+ 1236 0957 69040000 		.4byte	.LASF127
+ 1237 095b 02       		.uleb128 0x2
+ 1238 095c 08       		.byte	0x8
+ 1239 095d 04       		.byte	0x4
+ 1240 095e 48020000 		.4byte	.LASF128
+ 1241 0962 20       		.uleb128 0x20
+ 1242 0963 E6050000 		.4byte	.LASF144
+ 1243 0967 05       		.byte	0x5
+ 1244 0968 01       		.byte	0x1
+ 1245 0969 1D000000 		.4byte	0x1d
+ 1246 096d 07       		.byte	0x7
+ 1247 096e 8202     		.2byte	0x282
+ 1248 0970 06       		.byte	0x6
+ 1249 0971 8E090000 		.4byte	0x98e
+ 1250 0975 21       		.uleb128 0x21
+ 1251 0976 14060000 		.4byte	.LASF129
+ 1252 097a 7F       		.sleb128 -1
+ 1253 097b 22       		.uleb128 0x22
+ 1254 097c 22020000 		.4byte	.LASF130
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 23
+
+
+ 1255 0980 00       		.byte	0
+ 1256 0981 22       		.uleb128 0x22
+ 1257 0982 85000000 		.4byte	.LASF131
+ 1258 0986 01       		.byte	0x1
+ 1259 0987 22       		.uleb128 0x22
+ 1260 0988 62000000 		.4byte	.LASF132
+ 1261 098c 02       		.byte	0x2
+ 1262 098d 00       		.byte	0
+ 1263 098e 1F       		.uleb128 0x1f
+ 1264 098f 44060000 		.4byte	.LASF133
+ 1265 0993 07       		.byte	0x7
+ 1266 0994 8D02     		.2byte	0x28d
+ 1267 0996 23       		.byte	0x23
+ 1268 0997 62090000 		.4byte	0x962
+ 1269 099b 07       		.uleb128 0x7
+ 1270 099c 39020000 		.4byte	.LASF134
+ 1271 09a0 08       		.byte	0x8
+ 1272 09a1 A201     		.2byte	0x1a2
+ 1273 09a3 13       		.byte	0x13
+ 1274 09a4 87000000 		.4byte	0x87
+ 1275 09a8 05       		.uleb128 0x5
+ 1276 09a9 04       		.byte	0x4
+ 1277 09aa 9B090000 		.4byte	0x99b
+ 1278 09ae 1B       		.uleb128 0x1b
+ 1279 09af 10       		.byte	0x10
+ 1280 09b0 08       		.byte	0x8
+ 1281 09b1 EB0E     		.2byte	0xeeb
+ 1282 09b3 0B       		.byte	0xb
+ 1283 09b4 F1090000 		.4byte	0x9f1
+ 1284 09b8 18       		.uleb128 0x18
+ 1285 09b9 0C040000 		.4byte	.LASF135
+ 1286 09bd 08       		.byte	0x8
+ 1287 09be ED0E     		.2byte	0xeed
+ 1288 09c0 0E       		.byte	0xe
+ 1289 09c1 93000000 		.4byte	0x93
+ 1290 09c5 00       		.byte	0
+ 1291 09c6 18       		.uleb128 0x18
+ 1292 09c7 95040000 		.4byte	.LASF136
+ 1293 09cb 08       		.byte	0x8
+ 1294 09cc EE0E     		.2byte	0xeee
+ 1295 09ce 0C       		.byte	0xc
+ 1296 09cf A8090000 		.4byte	0x9a8
+ 1297 09d3 04       		.byte	0x4
+ 1298 09d4 18       		.uleb128 0x18
+ 1299 09d5 CB060000 		.4byte	.LASF137
+ 1300 09d9 08       		.byte	0x8
+ 1301 09da EF0E     		.2byte	0xeef
+ 1302 09dc 0C       		.byte	0xc
+ 1303 09dd A8090000 		.4byte	0x9a8
+ 1304 09e1 08       		.byte	0x8
+ 1305 09e2 18       		.uleb128 0x18
+ 1306 09e3 DA020000 		.4byte	.LASF138
+ 1307 09e7 08       		.byte	0x8
+ 1308 09e8 F00E     		.2byte	0xef0
+ 1309 09ea 0C       		.byte	0xc
+ 1310 09eb A8090000 		.4byte	0x9a8
+ 1311 09ef 0C       		.byte	0xc
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 24
+
+
+ 1312 09f0 00       		.byte	0
+ 1313 09f1 07       		.uleb128 0x7
+ 1314 09f2 3A040000 		.4byte	.LASF139
+ 1315 09f6 08       		.byte	0x8
+ 1316 09f7 F10E     		.2byte	0xef1
+ 1317 09f9 05       		.byte	0x5
+ 1318 09fa AE090000 		.4byte	0x9ae
+ 1319 09fe 23       		.uleb128 0x23
+ 1320 09ff A8030000 		.4byte	.LASF145
+ 1321 0a03 09       		.byte	0x9
+ 1322 0a04 33       		.byte	0x33
+ 1323 0a05 06       		.byte	0x6
+ 1324 0a06 510A0000 		.4byte	0xa51
+ 1325 0a0a 24       		.uleb128 0x24
+ 1326 0a0b 5300     		.ascii	"S\000"
+ 1327 0a0d 09       		.byte	0x9
+ 1328 0a0e 34       		.byte	0x34
+ 1329 0a0f 22       		.byte	0x22
+ 1330 0a10 510A0000 		.4byte	0xa51
+ 1331 0a14 25       		.uleb128 0x25
+ 1332 0a15 0C040000 		.4byte	.LASF135
+ 1333 0a19 09       		.byte	0x9
+ 1334 0a1a 35       		.byte	0x35
+ 1335 0a1b 0C       		.byte	0xc
+ 1336 0a1c 93000000 		.4byte	0x93
+ 1337 0a20 25       		.uleb128 0x25
+ 1338 0a21 CB060000 		.4byte	.LASF137
+ 1339 0a25 09       		.byte	0x9
+ 1340 0a26 36       		.byte	0x36
+ 1341 0a27 0B       		.byte	0xb
+ 1342 0a28 A8090000 		.4byte	0x9a8
+ 1343 0a2c 25       		.uleb128 0x25
+ 1344 0a2d DA020000 		.4byte	.LASF138
+ 1345 0a31 09       		.byte	0x9
+ 1346 0a32 37       		.byte	0x37
+ 1347 0a33 0B       		.byte	0xb
+ 1348 0a34 A8090000 		.4byte	0x9a8
+ 1349 0a38 25       		.uleb128 0x25
+ 1350 0a39 95040000 		.4byte	.LASF136
+ 1351 0a3d 09       		.byte	0x9
+ 1352 0a3e 38       		.byte	0x38
+ 1353 0a3f 0B       		.byte	0xb
+ 1354 0a40 A8090000 		.4byte	0x9a8
+ 1355 0a44 25       		.uleb128 0x25
+ 1356 0a45 0A060000 		.4byte	.LASF140
+ 1357 0a49 09       		.byte	0x9
+ 1358 0a4a 39       		.byte	0x39
+ 1359 0a4b 0C       		.byte	0xc
+ 1360 0a4c 9F000000 		.4byte	0x9f
+ 1361 0a50 00       		.byte	0
+ 1362 0a51 05       		.uleb128 0x5
+ 1363 0a52 04       		.byte	0x4
+ 1364 0a53 F1090000 		.4byte	0x9f1
+ 1365 0a57 00       		.byte	0
+ 1366              		.section	.gnu.debuglto_.debug_abbrev,"e",%progbits
+ 1367              	.Ldebug_abbrev0:
+ 1368 0000 01       		.uleb128 0x1
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 25
+
+
+ 1369 0001 11       		.uleb128 0x11
+ 1370 0002 01       		.byte	0x1
+ 1371 0003 25       		.uleb128 0x25
+ 1372 0004 0E       		.uleb128 0xe
+ 1373 0005 13       		.uleb128 0x13
+ 1374 0006 0B       		.uleb128 0xb
+ 1375 0007 03       		.uleb128 0x3
+ 1376 0008 0E       		.uleb128 0xe
+ 1377 0009 1B       		.uleb128 0x1b
+ 1378 000a 0E       		.uleb128 0xe
+ 1379 000b 10       		.uleb128 0x10
+ 1380 000c 17       		.uleb128 0x17
+ 1381 000d 00       		.byte	0
+ 1382 000e 00       		.byte	0
+ 1383 000f 02       		.uleb128 0x2
+ 1384 0010 24       		.uleb128 0x24
+ 1385 0011 00       		.byte	0
+ 1386 0012 0B       		.uleb128 0xb
+ 1387 0013 0B       		.uleb128 0xb
+ 1388 0014 3E       		.uleb128 0x3e
+ 1389 0015 0B       		.uleb128 0xb
+ 1390 0016 03       		.uleb128 0x3
+ 1391 0017 0E       		.uleb128 0xe
+ 1392 0018 00       		.byte	0
+ 1393 0019 00       		.byte	0
+ 1394 001a 03       		.uleb128 0x3
+ 1395 001b 16       		.uleb128 0x16
+ 1396 001c 00       		.byte	0
+ 1397 001d 03       		.uleb128 0x3
+ 1398 001e 0E       		.uleb128 0xe
+ 1399 001f 3A       		.uleb128 0x3a
+ 1400 0020 0B       		.uleb128 0xb
+ 1401 0021 3B       		.uleb128 0x3b
+ 1402 0022 0B       		.uleb128 0xb
+ 1403 0023 39       		.uleb128 0x39
+ 1404 0024 0B       		.uleb128 0xb
+ 1405 0025 49       		.uleb128 0x49
+ 1406 0026 13       		.uleb128 0x13
+ 1407 0027 00       		.byte	0
+ 1408 0028 00       		.byte	0
+ 1409 0029 04       		.uleb128 0x4
+ 1410 002a 24       		.uleb128 0x24
+ 1411 002b 00       		.byte	0
+ 1412 002c 0B       		.uleb128 0xb
+ 1413 002d 0B       		.uleb128 0xb
+ 1414 002e 3E       		.uleb128 0x3e
+ 1415 002f 0B       		.uleb128 0xb
+ 1416 0030 03       		.uleb128 0x3
+ 1417 0031 08       		.uleb128 0x8
+ 1418 0032 00       		.byte	0
+ 1419 0033 00       		.byte	0
+ 1420 0034 05       		.uleb128 0x5
+ 1421 0035 0F       		.uleb128 0xf
+ 1422 0036 00       		.byte	0
+ 1423 0037 0B       		.uleb128 0xb
+ 1424 0038 0B       		.uleb128 0xb
+ 1425 0039 49       		.uleb128 0x49
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 26
+
+
+ 1426 003a 13       		.uleb128 0x13
+ 1427 003b 00       		.byte	0
+ 1428 003c 00       		.byte	0
+ 1429 003d 06       		.uleb128 0x6
+ 1430 003e 13       		.uleb128 0x13
+ 1431 003f 00       		.byte	0
+ 1432 0040 03       		.uleb128 0x3
+ 1433 0041 0E       		.uleb128 0xe
+ 1434 0042 3C       		.uleb128 0x3c
+ 1435 0043 19       		.uleb128 0x19
+ 1436 0044 00       		.byte	0
+ 1437 0045 00       		.byte	0
+ 1438 0046 07       		.uleb128 0x7
+ 1439 0047 16       		.uleb128 0x16
+ 1440 0048 00       		.byte	0
+ 1441 0049 03       		.uleb128 0x3
+ 1442 004a 0E       		.uleb128 0xe
+ 1443 004b 3A       		.uleb128 0x3a
+ 1444 004c 0B       		.uleb128 0xb
+ 1445 004d 3B       		.uleb128 0x3b
+ 1446 004e 05       		.uleb128 0x5
+ 1447 004f 39       		.uleb128 0x39
+ 1448 0050 0B       		.uleb128 0xb
+ 1449 0051 49       		.uleb128 0x49
+ 1450 0052 13       		.uleb128 0x13
+ 1451 0053 00       		.byte	0
+ 1452 0054 00       		.byte	0
+ 1453 0055 08       		.uleb128 0x8
+ 1454 0056 17       		.uleb128 0x17
+ 1455 0057 01       		.byte	0x1
+ 1456 0058 0B       		.uleb128 0xb
+ 1457 0059 0B       		.uleb128 0xb
+ 1458 005a 3A       		.uleb128 0x3a
+ 1459 005b 0B       		.uleb128 0xb
+ 1460 005c 3B       		.uleb128 0x3b
+ 1461 005d 0B       		.uleb128 0xb
+ 1462 005e 39       		.uleb128 0x39
+ 1463 005f 0B       		.uleb128 0xb
+ 1464 0060 01       		.uleb128 0x1
+ 1465 0061 13       		.uleb128 0x13
+ 1466 0062 00       		.byte	0
+ 1467 0063 00       		.byte	0
+ 1468 0064 09       		.uleb128 0x9
+ 1469 0065 0D       		.uleb128 0xd
+ 1470 0066 00       		.byte	0
+ 1471 0067 03       		.uleb128 0x3
+ 1472 0068 0E       		.uleb128 0xe
+ 1473 0069 3A       		.uleb128 0x3a
+ 1474 006a 0B       		.uleb128 0xb
+ 1475 006b 3B       		.uleb128 0x3b
+ 1476 006c 0B       		.uleb128 0xb
+ 1477 006d 39       		.uleb128 0x39
+ 1478 006e 0B       		.uleb128 0xb
+ 1479 006f 49       		.uleb128 0x49
+ 1480 0070 13       		.uleb128 0x13
+ 1481 0071 00       		.byte	0
+ 1482 0072 00       		.byte	0
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 27
+
+
+ 1483 0073 0A       		.uleb128 0xa
+ 1484 0074 01       		.uleb128 0x1
+ 1485 0075 01       		.byte	0x1
+ 1486 0076 49       		.uleb128 0x49
+ 1487 0077 13       		.uleb128 0x13
+ 1488 0078 01       		.uleb128 0x1
+ 1489 0079 13       		.uleb128 0x13
+ 1490 007a 00       		.byte	0
+ 1491 007b 00       		.byte	0
+ 1492 007c 0B       		.uleb128 0xb
+ 1493 007d 21       		.uleb128 0x21
+ 1494 007e 00       		.byte	0
+ 1495 007f 49       		.uleb128 0x49
+ 1496 0080 13       		.uleb128 0x13
+ 1497 0081 2F       		.uleb128 0x2f
+ 1498 0082 0B       		.uleb128 0xb
+ 1499 0083 00       		.byte	0
+ 1500 0084 00       		.byte	0
+ 1501 0085 0C       		.uleb128 0xc
+ 1502 0086 13       		.uleb128 0x13
+ 1503 0087 01       		.byte	0x1
+ 1504 0088 0B       		.uleb128 0xb
+ 1505 0089 0B       		.uleb128 0xb
+ 1506 008a 3A       		.uleb128 0x3a
+ 1507 008b 0B       		.uleb128 0xb
+ 1508 008c 3B       		.uleb128 0x3b
+ 1509 008d 0B       		.uleb128 0xb
+ 1510 008e 39       		.uleb128 0x39
+ 1511 008f 0B       		.uleb128 0xb
+ 1512 0090 01       		.uleb128 0x1
+ 1513 0091 13       		.uleb128 0x13
+ 1514 0092 00       		.byte	0
+ 1515 0093 00       		.byte	0
+ 1516 0094 0D       		.uleb128 0xd
+ 1517 0095 0D       		.uleb128 0xd
+ 1518 0096 00       		.byte	0
+ 1519 0097 03       		.uleb128 0x3
+ 1520 0098 0E       		.uleb128 0xe
+ 1521 0099 3A       		.uleb128 0x3a
+ 1522 009a 0B       		.uleb128 0xb
+ 1523 009b 3B       		.uleb128 0x3b
+ 1524 009c 0B       		.uleb128 0xb
+ 1525 009d 39       		.uleb128 0x39
+ 1526 009e 0B       		.uleb128 0xb
+ 1527 009f 49       		.uleb128 0x49
+ 1528 00a0 13       		.uleb128 0x13
+ 1529 00a1 38       		.uleb128 0x38
+ 1530 00a2 0B       		.uleb128 0xb
+ 1531 00a3 00       		.byte	0
+ 1532 00a4 00       		.byte	0
+ 1533 00a5 0E       		.uleb128 0xe
+ 1534 00a6 0F       		.uleb128 0xf
+ 1535 00a7 00       		.byte	0
+ 1536 00a8 0B       		.uleb128 0xb
+ 1537 00a9 0B       		.uleb128 0xb
+ 1538 00aa 00       		.byte	0
+ 1539 00ab 00       		.byte	0
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 28
+
+
+ 1540 00ac 0F       		.uleb128 0xf
+ 1541 00ad 26       		.uleb128 0x26
+ 1542 00ae 00       		.byte	0
+ 1543 00af 49       		.uleb128 0x49
+ 1544 00b0 13       		.uleb128 0x13
+ 1545 00b1 00       		.byte	0
+ 1546 00b2 00       		.byte	0
+ 1547 00b3 10       		.uleb128 0x10
+ 1548 00b4 13       		.uleb128 0x13
+ 1549 00b5 01       		.byte	0x1
+ 1550 00b6 03       		.uleb128 0x3
+ 1551 00b7 0E       		.uleb128 0xe
+ 1552 00b8 0B       		.uleb128 0xb
+ 1553 00b9 0B       		.uleb128 0xb
+ 1554 00ba 3A       		.uleb128 0x3a
+ 1555 00bb 0B       		.uleb128 0xb
+ 1556 00bc 3B       		.uleb128 0x3b
+ 1557 00bd 0B       		.uleb128 0xb
+ 1558 00be 39       		.uleb128 0x39
+ 1559 00bf 0B       		.uleb128 0xb
+ 1560 00c0 01       		.uleb128 0x1
+ 1561 00c1 13       		.uleb128 0x13
+ 1562 00c2 00       		.byte	0
+ 1563 00c3 00       		.byte	0
+ 1564 00c4 11       		.uleb128 0x11
+ 1565 00c5 0D       		.uleb128 0xd
+ 1566 00c6 00       		.byte	0
+ 1567 00c7 03       		.uleb128 0x3
+ 1568 00c8 08       		.uleb128 0x8
+ 1569 00c9 3A       		.uleb128 0x3a
+ 1570 00ca 0B       		.uleb128 0xb
+ 1571 00cb 3B       		.uleb128 0x3b
+ 1572 00cc 0B       		.uleb128 0xb
+ 1573 00cd 39       		.uleb128 0x39
+ 1574 00ce 0B       		.uleb128 0xb
+ 1575 00cf 49       		.uleb128 0x49
+ 1576 00d0 13       		.uleb128 0x13
+ 1577 00d1 38       		.uleb128 0x38
+ 1578 00d2 0B       		.uleb128 0xb
+ 1579 00d3 00       		.byte	0
+ 1580 00d4 00       		.byte	0
+ 1581 00d5 12       		.uleb128 0x12
+ 1582 00d6 13       		.uleb128 0x13
+ 1583 00d7 01       		.byte	0x1
+ 1584 00d8 03       		.uleb128 0x3
+ 1585 00d9 0E       		.uleb128 0xe
+ 1586 00da 0B       		.uleb128 0xb
+ 1587 00db 05       		.uleb128 0x5
+ 1588 00dc 3A       		.uleb128 0x3a
+ 1589 00dd 0B       		.uleb128 0xb
+ 1590 00de 3B       		.uleb128 0x3b
+ 1591 00df 0B       		.uleb128 0xb
+ 1592 00e0 39       		.uleb128 0x39
+ 1593 00e1 0B       		.uleb128 0xb
+ 1594 00e2 01       		.uleb128 0x1
+ 1595 00e3 13       		.uleb128 0x13
+ 1596 00e4 00       		.byte	0
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 29
+
+
+ 1597 00e5 00       		.byte	0
+ 1598 00e6 13       		.uleb128 0x13
+ 1599 00e7 0D       		.uleb128 0xd
+ 1600 00e8 00       		.byte	0
+ 1601 00e9 03       		.uleb128 0x3
+ 1602 00ea 0E       		.uleb128 0xe
+ 1603 00eb 3A       		.uleb128 0x3a
+ 1604 00ec 0B       		.uleb128 0xb
+ 1605 00ed 3B       		.uleb128 0x3b
+ 1606 00ee 0B       		.uleb128 0xb
+ 1607 00ef 39       		.uleb128 0x39
+ 1608 00f0 0B       		.uleb128 0xb
+ 1609 00f1 49       		.uleb128 0x49
+ 1610 00f2 13       		.uleb128 0x13
+ 1611 00f3 38       		.uleb128 0x38
+ 1612 00f4 05       		.uleb128 0x5
+ 1613 00f5 00       		.byte	0
+ 1614 00f6 00       		.byte	0
+ 1615 00f7 14       		.uleb128 0x14
+ 1616 00f8 15       		.uleb128 0x15
+ 1617 00f9 00       		.byte	0
+ 1618 00fa 27       		.uleb128 0x27
+ 1619 00fb 19       		.uleb128 0x19
+ 1620 00fc 00       		.byte	0
+ 1621 00fd 00       		.byte	0
+ 1622 00fe 15       		.uleb128 0x15
+ 1623 00ff 15       		.uleb128 0x15
+ 1624 0100 01       		.byte	0x1
+ 1625 0101 27       		.uleb128 0x27
+ 1626 0102 19       		.uleb128 0x19
+ 1627 0103 49       		.uleb128 0x49
+ 1628 0104 13       		.uleb128 0x13
+ 1629 0105 01       		.uleb128 0x1
+ 1630 0106 13       		.uleb128 0x13
+ 1631 0107 00       		.byte	0
+ 1632 0108 00       		.byte	0
+ 1633 0109 16       		.uleb128 0x16
+ 1634 010a 05       		.uleb128 0x5
+ 1635 010b 00       		.byte	0
+ 1636 010c 49       		.uleb128 0x49
+ 1637 010d 13       		.uleb128 0x13
+ 1638 010e 00       		.byte	0
+ 1639 010f 00       		.byte	0
+ 1640 0110 17       		.uleb128 0x17
+ 1641 0111 13       		.uleb128 0x13
+ 1642 0112 01       		.byte	0x1
+ 1643 0113 03       		.uleb128 0x3
+ 1644 0114 0E       		.uleb128 0xe
+ 1645 0115 0B       		.uleb128 0xb
+ 1646 0116 05       		.uleb128 0x5
+ 1647 0117 3A       		.uleb128 0x3a
+ 1648 0118 0B       		.uleb128 0xb
+ 1649 0119 3B       		.uleb128 0x3b
+ 1650 011a 05       		.uleb128 0x5
+ 1651 011b 39       		.uleb128 0x39
+ 1652 011c 0B       		.uleb128 0xb
+ 1653 011d 01       		.uleb128 0x1
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 30
+
+
+ 1654 011e 13       		.uleb128 0x13
+ 1655 011f 00       		.byte	0
+ 1656 0120 00       		.byte	0
+ 1657 0121 18       		.uleb128 0x18
+ 1658 0122 0D       		.uleb128 0xd
+ 1659 0123 00       		.byte	0
+ 1660 0124 03       		.uleb128 0x3
+ 1661 0125 0E       		.uleb128 0xe
+ 1662 0126 3A       		.uleb128 0x3a
+ 1663 0127 0B       		.uleb128 0xb
+ 1664 0128 3B       		.uleb128 0x3b
+ 1665 0129 05       		.uleb128 0x5
+ 1666 012a 39       		.uleb128 0x39
+ 1667 012b 0B       		.uleb128 0xb
+ 1668 012c 49       		.uleb128 0x49
+ 1669 012d 13       		.uleb128 0x13
+ 1670 012e 38       		.uleb128 0x38
+ 1671 012f 0B       		.uleb128 0xb
+ 1672 0130 00       		.byte	0
+ 1673 0131 00       		.byte	0
+ 1674 0132 19       		.uleb128 0x19
+ 1675 0133 0D       		.uleb128 0xd
+ 1676 0134 00       		.byte	0
+ 1677 0135 03       		.uleb128 0x3
+ 1678 0136 0E       		.uleb128 0xe
+ 1679 0137 3A       		.uleb128 0x3a
+ 1680 0138 0B       		.uleb128 0xb
+ 1681 0139 3B       		.uleb128 0x3b
+ 1682 013a 05       		.uleb128 0x5
+ 1683 013b 39       		.uleb128 0x39
+ 1684 013c 0B       		.uleb128 0xb
+ 1685 013d 49       		.uleb128 0x49
+ 1686 013e 13       		.uleb128 0x13
+ 1687 013f 38       		.uleb128 0x38
+ 1688 0140 05       		.uleb128 0x5
+ 1689 0141 00       		.byte	0
+ 1690 0142 00       		.byte	0
+ 1691 0143 1A       		.uleb128 0x1a
+ 1692 0144 13       		.uleb128 0x13
+ 1693 0145 01       		.byte	0x1
+ 1694 0146 03       		.uleb128 0x3
+ 1695 0147 0E       		.uleb128 0xe
+ 1696 0148 0B       		.uleb128 0xb
+ 1697 0149 0B       		.uleb128 0xb
+ 1698 014a 3A       		.uleb128 0x3a
+ 1699 014b 0B       		.uleb128 0xb
+ 1700 014c 3B       		.uleb128 0x3b
+ 1701 014d 05       		.uleb128 0x5
+ 1702 014e 39       		.uleb128 0x39
+ 1703 014f 0B       		.uleb128 0xb
+ 1704 0150 01       		.uleb128 0x1
+ 1705 0151 13       		.uleb128 0x13
+ 1706 0152 00       		.byte	0
+ 1707 0153 00       		.byte	0
+ 1708 0154 1B       		.uleb128 0x1b
+ 1709 0155 13       		.uleb128 0x13
+ 1710 0156 01       		.byte	0x1
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 31
+
+
+ 1711 0157 0B       		.uleb128 0xb
+ 1712 0158 0B       		.uleb128 0xb
+ 1713 0159 3A       		.uleb128 0x3a
+ 1714 015a 0B       		.uleb128 0xb
+ 1715 015b 3B       		.uleb128 0x3b
+ 1716 015c 05       		.uleb128 0x5
+ 1717 015d 39       		.uleb128 0x39
+ 1718 015e 0B       		.uleb128 0xb
+ 1719 015f 01       		.uleb128 0x1
+ 1720 0160 13       		.uleb128 0x13
+ 1721 0161 00       		.byte	0
+ 1722 0162 00       		.byte	0
+ 1723 0163 1C       		.uleb128 0x1c
+ 1724 0164 17       		.uleb128 0x17
+ 1725 0165 01       		.byte	0x1
+ 1726 0166 0B       		.uleb128 0xb
+ 1727 0167 0B       		.uleb128 0xb
+ 1728 0168 3A       		.uleb128 0x3a
+ 1729 0169 0B       		.uleb128 0xb
+ 1730 016a 3B       		.uleb128 0x3b
+ 1731 016b 05       		.uleb128 0x5
+ 1732 016c 39       		.uleb128 0x39
+ 1733 016d 0B       		.uleb128 0xb
+ 1734 016e 01       		.uleb128 0x1
+ 1735 016f 13       		.uleb128 0x13
+ 1736 0170 00       		.byte	0
+ 1737 0171 00       		.byte	0
+ 1738 0172 1D       		.uleb128 0x1d
+ 1739 0173 0D       		.uleb128 0xd
+ 1740 0174 00       		.byte	0
+ 1741 0175 03       		.uleb128 0x3
+ 1742 0176 0E       		.uleb128 0xe
+ 1743 0177 3A       		.uleb128 0x3a
+ 1744 0178 0B       		.uleb128 0xb
+ 1745 0179 3B       		.uleb128 0x3b
+ 1746 017a 05       		.uleb128 0x5
+ 1747 017b 39       		.uleb128 0x39
+ 1748 017c 0B       		.uleb128 0xb
+ 1749 017d 49       		.uleb128 0x49
+ 1750 017e 13       		.uleb128 0x13
+ 1751 017f 00       		.byte	0
+ 1752 0180 00       		.byte	0
+ 1753 0181 1E       		.uleb128 0x1e
+ 1754 0182 15       		.uleb128 0x15
+ 1755 0183 01       		.byte	0x1
+ 1756 0184 27       		.uleb128 0x27
+ 1757 0185 19       		.uleb128 0x19
+ 1758 0186 01       		.uleb128 0x1
+ 1759 0187 13       		.uleb128 0x13
+ 1760 0188 00       		.byte	0
+ 1761 0189 00       		.byte	0
+ 1762 018a 1F       		.uleb128 0x1f
+ 1763 018b 34       		.uleb128 0x34
+ 1764 018c 00       		.byte	0
+ 1765 018d 03       		.uleb128 0x3
+ 1766 018e 0E       		.uleb128 0xe
+ 1767 018f 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 32
+
+
+ 1768 0190 0B       		.uleb128 0xb
+ 1769 0191 3B       		.uleb128 0x3b
+ 1770 0192 05       		.uleb128 0x5
+ 1771 0193 39       		.uleb128 0x39
+ 1772 0194 0B       		.uleb128 0xb
+ 1773 0195 49       		.uleb128 0x49
+ 1774 0196 13       		.uleb128 0x13
+ 1775 0197 3F       		.uleb128 0x3f
+ 1776 0198 19       		.uleb128 0x19
+ 1777 0199 3C       		.uleb128 0x3c
+ 1778 019a 19       		.uleb128 0x19
+ 1779 019b 00       		.byte	0
+ 1780 019c 00       		.byte	0
+ 1781 019d 20       		.uleb128 0x20
+ 1782 019e 04       		.uleb128 0x4
+ 1783 019f 01       		.byte	0x1
+ 1784 01a0 03       		.uleb128 0x3
+ 1785 01a1 0E       		.uleb128 0xe
+ 1786 01a2 3E       		.uleb128 0x3e
+ 1787 01a3 0B       		.uleb128 0xb
+ 1788 01a4 0B       		.uleb128 0xb
+ 1789 01a5 0B       		.uleb128 0xb
+ 1790 01a6 49       		.uleb128 0x49
+ 1791 01a7 13       		.uleb128 0x13
+ 1792 01a8 3A       		.uleb128 0x3a
+ 1793 01a9 0B       		.uleb128 0xb
+ 1794 01aa 3B       		.uleb128 0x3b
+ 1795 01ab 05       		.uleb128 0x5
+ 1796 01ac 39       		.uleb128 0x39
+ 1797 01ad 0B       		.uleb128 0xb
+ 1798 01ae 01       		.uleb128 0x1
+ 1799 01af 13       		.uleb128 0x13
+ 1800 01b0 00       		.byte	0
+ 1801 01b1 00       		.byte	0
+ 1802 01b2 21       		.uleb128 0x21
+ 1803 01b3 28       		.uleb128 0x28
+ 1804 01b4 00       		.byte	0
+ 1805 01b5 03       		.uleb128 0x3
+ 1806 01b6 0E       		.uleb128 0xe
+ 1807 01b7 1C       		.uleb128 0x1c
+ 1808 01b8 0D       		.uleb128 0xd
+ 1809 01b9 00       		.byte	0
+ 1810 01ba 00       		.byte	0
+ 1811 01bb 22       		.uleb128 0x22
+ 1812 01bc 28       		.uleb128 0x28
+ 1813 01bd 00       		.byte	0
+ 1814 01be 03       		.uleb128 0x3
+ 1815 01bf 0E       		.uleb128 0xe
+ 1816 01c0 1C       		.uleb128 0x1c
+ 1817 01c1 0B       		.uleb128 0xb
+ 1818 01c2 00       		.byte	0
+ 1819 01c3 00       		.byte	0
+ 1820 01c4 23       		.uleb128 0x23
+ 1821 01c5 2E       		.uleb128 0x2e
+ 1822 01c6 01       		.byte	0x1
+ 1823 01c7 3F       		.uleb128 0x3f
+ 1824 01c8 19       		.uleb128 0x19
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 33
+
+
+ 1825 01c9 03       		.uleb128 0x3
+ 1826 01ca 0E       		.uleb128 0xe
+ 1827 01cb 3A       		.uleb128 0x3a
+ 1828 01cc 0B       		.uleb128 0xb
+ 1829 01cd 3B       		.uleb128 0x3b
+ 1830 01ce 0B       		.uleb128 0xb
+ 1831 01cf 39       		.uleb128 0x39
+ 1832 01d0 0B       		.uleb128 0xb
+ 1833 01d1 27       		.uleb128 0x27
+ 1834 01d2 19       		.uleb128 0x19
+ 1835 01d3 01       		.uleb128 0x1
+ 1836 01d4 13       		.uleb128 0x13
+ 1837 01d5 00       		.byte	0
+ 1838 01d6 00       		.byte	0
+ 1839 01d7 24       		.uleb128 0x24
+ 1840 01d8 05       		.uleb128 0x5
+ 1841 01d9 00       		.byte	0
+ 1842 01da 03       		.uleb128 0x3
+ 1843 01db 08       		.uleb128 0x8
+ 1844 01dc 3A       		.uleb128 0x3a
+ 1845 01dd 0B       		.uleb128 0xb
+ 1846 01de 3B       		.uleb128 0x3b
+ 1847 01df 0B       		.uleb128 0xb
+ 1848 01e0 39       		.uleb128 0x39
+ 1849 01e1 0B       		.uleb128 0xb
+ 1850 01e2 49       		.uleb128 0x49
+ 1851 01e3 13       		.uleb128 0x13
+ 1852 01e4 00       		.byte	0
+ 1853 01e5 00       		.byte	0
+ 1854 01e6 25       		.uleb128 0x25
+ 1855 01e7 05       		.uleb128 0x5
+ 1856 01e8 00       		.byte	0
+ 1857 01e9 03       		.uleb128 0x3
+ 1858 01ea 0E       		.uleb128 0xe
+ 1859 01eb 3A       		.uleb128 0x3a
+ 1860 01ec 0B       		.uleb128 0xb
+ 1861 01ed 3B       		.uleb128 0x3b
+ 1862 01ee 0B       		.uleb128 0xb
+ 1863 01ef 39       		.uleb128 0x39
+ 1864 01f0 0B       		.uleb128 0xb
+ 1865 01f1 49       		.uleb128 0x49
+ 1866 01f2 13       		.uleb128 0x13
+ 1867 01f3 00       		.byte	0
+ 1868 01f4 00       		.byte	0
+ 1869 01f5 00       		.byte	0
+ 1870              		.section	.gnu.debuglto_.debug_line,"e",%progbits
+ 1871              	.Ldebug_line0:
+ 1872 0000 07020000 		.4byte	.LELT0-.LSLT0
+ 1873              	.LSLT0:
+ 1874 0004 0400     		.2byte	0x4
+ 1875 0006 01020000 		.4byte	.LELTP0-.LASLTP0
+ 1876              	.LASLTP0:
+ 1877 000a 01       		.byte	0x1
+ 1878 000b 01       		.byte	0x1
+ 1879 000c 01       		.byte	0x1
+ 1880 000d F6       		.byte	0xf6
+ 1881 000e F2       		.byte	0xf2
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 34
+
+
+ 1882 000f 0D       		.byte	0xd
+ 1883 0010 00       		.byte	0
+ 1884 0011 01       		.byte	0x1
+ 1885 0012 01       		.byte	0x1
+ 1886 0013 01       		.byte	0x1
+ 1887 0014 01       		.byte	0x1
+ 1888 0015 00       		.byte	0
+ 1889 0016 00       		.byte	0
+ 1890 0017 00       		.byte	0
+ 1891 0018 01       		.byte	0x1
+ 1892 0019 00       		.byte	0
+ 1893 001a 00       		.byte	0
+ 1894 001b 01       		.byte	0x1
+ 1895 001c 633A5C63 		.ascii	"c:\\chibistudio\\tools\\gnu tools arm embedded\\9.0"
+ 1895      68696269 
+ 1895      73747564 
+ 1895      696F5C74 
+ 1895      6F6F6C73 
+ 1896 004b 20323031 		.ascii	" 2019q4\\arm-none-eabi\\include\\machine"
+ 1896      3971345C 
+ 1896      61726D2D 
+ 1896      6E6F6E65 
+ 1896      2D656162 
+ 1897 0070 00       		.byte	0
+ 1898 0071 633A5C63 		.ascii	"c:\\chibistudio\\tools\\gnu tools arm embedded\\9.0"
+ 1898      68696269 
+ 1898      73747564 
+ 1898      696F5C74 
+ 1898      6F6F6C73 
+ 1899 00a0 20323031 		.ascii	" 2019q4\\arm-none-eabi\\include\\sys"
+ 1899      3971345C 
+ 1899      61726D2D 
+ 1899      6E6F6E65 
+ 1899      2D656162 
+ 1900 00c1 00       		.byte	0
+ 1901 00c2 633A5C63 		.ascii	"c:\\chibistudio\\tools\\gnu tools arm embedded\\9.0"
+ 1901      68696269 
+ 1901      73747564 
+ 1901      696F5C74 
+ 1901      6F6F6C73 
+ 1902 00f1 20323031 		.ascii	" 2019q4\\arm-none-eabi\\include"
+ 1902      3971345C 
+ 1902      61726D2D 
+ 1902      6E6F6E65 
+ 1902      2D656162 
+ 1903 010e 00       		.byte	0
+ 1904 010f 633A5C63 		.ascii	"c:\\chibistudio\\tools\\gnu tools arm embedded\\9.0"
+ 1904      68696269 
+ 1904      73747564 
+ 1904      696F5C74 
+ 1904      6F6F6C73 
+ 1905 013e 20323031 		.ascii	" 2019q4\\lib\\gcc\\arm-none-eabi\\9.2.1\\include"
+ 1905      3971345C 
+ 1905      6C69625C 
+ 1905      6763635C 
+ 1905      61726D2D 
+ 1906 0169 00       		.byte	0
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 35
+
+
+ 1907 016a 4453502F 		.ascii	"DSP/FilteringFunctions"
+ 1907      46696C74 
+ 1907      6572696E 
+ 1907      6746756E 
+ 1907      6374696F 
+ 1908 0180 00       		.byte	0
+ 1909 0181 696E63   		.ascii	"inc"
+ 1910 0184 00       		.byte	0
+ 1911 0185 00       		.byte	0
+ 1912 0186 5F646566 		.ascii	"_default_types.h\000"
+ 1912      61756C74 
+ 1912      5F747970 
+ 1912      65732E68 
+ 1912      00
+ 1913 0197 01       		.uleb128 0x1
+ 1914 0198 00       		.uleb128 0
+ 1915 0199 00       		.uleb128 0
+ 1916 019a 5F737464 		.ascii	"_stdint.h\000"
+ 1916      696E742E 
+ 1916      6800
+ 1917 01a4 02       		.uleb128 0x2
+ 1918 01a5 00       		.uleb128 0
+ 1919 01a6 00       		.uleb128 0
+ 1920 01a7 6C6F636B 		.ascii	"lock.h\000"
+ 1920      2E6800
+ 1921 01ae 02       		.uleb128 0x2
+ 1922 01af 00       		.uleb128 0
+ 1923 01b0 00       		.uleb128 0
+ 1924 01b1 5F747970 		.ascii	"_types.h\000"
+ 1924      65732E68 
+ 1924      00
+ 1925 01ba 02       		.uleb128 0x2
+ 1926 01bb 00       		.uleb128 0
+ 1927 01bc 00       		.uleb128 0
+ 1928 01bd 73746464 		.ascii	"stddef.h\000"
+ 1928      65662E68 
+ 1928      00
+ 1929 01c6 04       		.uleb128 0x4
+ 1930 01c7 00       		.uleb128 0
+ 1931 01c8 00       		.uleb128 0
+ 1932 01c9 7265656E 		.ascii	"reent.h\000"
+ 1932      742E6800 
+ 1933 01d1 02       		.uleb128 0x2
+ 1934 01d2 00       		.uleb128 0
+ 1935 01d3 00       		.uleb128 0
+ 1936 01d4 6D617468 		.ascii	"math.h\000"
+ 1936      2E6800
+ 1937 01db 03       		.uleb128 0x3
+ 1938 01dc 00       		.uleb128 0
+ 1939 01dd 00       		.uleb128 0
+ 1940 01de 61726D5F 		.ascii	"arm_math.h\000"
+ 1940      6D617468 
+ 1940      2E6800
+ 1941 01e9 06       		.uleb128 0x6
+ 1942 01ea 00       		.uleb128 0
+ 1943 01eb 00       		.uleb128 0
+ 1944 01ec 61726D5F 		.ascii	"arm_iir_lattice_init_q15.c\000"
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 36
+
+
+ 1944      6969725F 
+ 1944      6C617474 
+ 1944      6963655F 
+ 1944      696E6974 
+ 1945 0207 05       		.uleb128 0x5
+ 1946 0208 00       		.uleb128 0
+ 1947 0209 00       		.uleb128 0
+ 1948 020a 00       		.byte	0
+ 1949              	.LELTP0:
+ 1950              	.LELT0:
+ 1951              		.section	.gnu.debuglto_.debug_str,"eMS",%progbits,1
+ 1952              	.LASF45:
+ 1953 0000 5F64736F 		.ascii	"_dso_handle\000"
+ 1953      5F68616E 
+ 1953      646C6500 
+ 1954              	.LASF53:
+ 1955 000c 5F73697A 		.ascii	"_size\000"
+ 1955      6500
+ 1956              	.LASF97:
+ 1957 0012 5F72616E 		.ascii	"_rand48\000"
+ 1957      64343800 
+ 1958              	.LASF77:
+ 1959 001a 5F656D65 		.ascii	"_emergency\000"
+ 1959      7267656E 
+ 1959      637900
+ 1960              	.LASF67:
+ 1961 0025 5F646174 		.ascii	"_data\000"
+ 1961      6100
+ 1962              	.LASF117:
+ 1963 002b 5F776372 		.ascii	"_wcrtomb_state\000"
+ 1963      746F6D62 
+ 1963      5F737461 
+ 1963      746500
+ 1964              	.LASF118:
+ 1965 003a 5F776373 		.ascii	"_wcsrtombs_state\000"
+ 1965      72746F6D 
+ 1965      62735F73 
+ 1965      74617465 
+ 1965      00
+ 1966              	.LASF10:
+ 1967 004b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1967      206C6F6E 
+ 1967      6720756E 
+ 1967      7369676E 
+ 1967      65642069 
+ 1968              	.LASF132:
+ 1969 0062 5F5F6664 		.ascii	"__fdlibm_posix\000"
+ 1969      6C69626D 
+ 1969      5F706F73 
+ 1969      697800
+ 1970              	.LASF57:
+ 1971 0071 5F6C6266 		.ascii	"_lbfsize\000"
+ 1971      73697A65 
+ 1971      00
+ 1972              	.LASF124:
+ 1973 007a 5F5F6C6F 		.ascii	"__locale_t\000"
+ 1973      63616C65 
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 37
+
+
+ 1973      5F7400
+ 1974              	.LASF131:
+ 1975 0085 5F5F6664 		.ascii	"__fdlibm_xopen\000"
+ 1975      6C69626D 
+ 1975      5F786F70 
+ 1975      656E00
+ 1976              	.LASF115:
+ 1977 0094 5F6D6272 		.ascii	"_mbrtowc_state\000"
+ 1977      746F7763 
+ 1977      5F737461 
+ 1977      746500
+ 1978              	.LASF141:
+ 1979 00a3 474E5520 		.ascii	"GNU C17 9.2.1 20191025 (release) [ARM/arm-9-branch "
+ 1979      43313720 
+ 1979      392E322E 
+ 1979      31203230 
+ 1979      31393130 
+ 1980 00d6 72657669 		.ascii	"revision 277599] -mcpu=cortex-m4 -mthumb -mfloat-ab"
+ 1980      73696F6E 
+ 1980      20323737 
+ 1980      3539395D 
+ 1980      202D6D63 
+ 1981 0109 693D6861 		.ascii	"i=hard -mfpu=fpv4-sp-d16 -march=armv7e-m+fp -ggdb -"
+ 1981      7264202D 
+ 1981      6D667075 
+ 1981      3D667076 
+ 1981      342D7370 
+ 1982 013c 4F32202D 		.ascii	"O2 -fomit-frame-pointer -falign-functions=16 -ffunc"
+ 1982      666F6D69 
+ 1982      742D6672 
+ 1982      616D652D 
+ 1982      706F696E 
+ 1983 016f 74696F6E 		.ascii	"tion-sections -fdata-sections -fno-common -flto\000"
+ 1983      2D736563 
+ 1983      74696F6E 
+ 1983      73202D66 
+ 1983      64617461 
+ 1984              	.LASF34:
+ 1985 019f 5F5F746D 		.ascii	"__tm_sec\000"
+ 1985      5F736563 
+ 1985      00
+ 1986              	.LASF12:
+ 1987 01a8 696E7431 		.ascii	"int16_t\000"
+ 1987      365F7400 
+ 1988              	.LASF9:
+ 1989 01b0 6C6F6E67 		.ascii	"long long int\000"
+ 1989      206C6F6E 
+ 1989      6720696E 
+ 1989      7400
+ 1990              	.LASF0:
+ 1991 01be 7369676E 		.ascii	"signed char\000"
+ 1991      65642063 
+ 1991      68617200 
+ 1992              	.LASF63:
+ 1993 01ca 5F756275 		.ascii	"_ubuf\000"
+ 1993      6600
+ 1994              	.LASF52:
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 38
+
+
+ 1995 01d0 5F626173 		.ascii	"_base\000"
+ 1995      6500
+ 1996              	.LASF36:
+ 1997 01d6 5F5F746D 		.ascii	"__tm_hour\000"
+ 1997      5F686F75 
+ 1997      7200
+ 1998              	.LASF92:
+ 1999 01e0 5F5F7366 		.ascii	"__sf\000"
+ 1999      00
+ 2000              	.LASF43:
+ 2001 01e5 5F6F6E5F 		.ascii	"_on_exit_args\000"
+ 2001      65786974 
+ 2001      5F617267 
+ 2001      7300
+ 2002              	.LASF58:
+ 2003 01f3 5F636F6F 		.ascii	"_cookie\000"
+ 2003      6B696500 
+ 2004              	.LASF91:
+ 2005 01fb 5F5F7367 		.ascii	"__sglue\000"
+ 2005      6C756500 
+ 2006              	.LASF6:
+ 2007 0203 6C6F6E67 		.ascii	"long int\000"
+ 2007      20696E74 
+ 2007      00
+ 2008              	.LASF55:
+ 2009 020c 5F666C61 		.ascii	"_flags\000"
+ 2009      677300
+ 2010              	.LASF47:
+ 2011 0213 5F69735F 		.ascii	"_is_cxa\000"
+ 2011      63786100 
+ 2012              	.LASF73:
+ 2013 021b 5F737464 		.ascii	"_stdin\000"
+ 2013      696E00
+ 2014              	.LASF130:
+ 2015 0222 5F5F6664 		.ascii	"__fdlibm_svid\000"
+ 2015      6C69626D 
+ 2015      5F737669 
+ 2015      6400
+ 2016              	.LASF65:
+ 2017 0230 5F626C6B 		.ascii	"_blksize\000"
+ 2017      73697A65 
+ 2017      00
+ 2018              	.LASF134:
+ 2019 0239 7131355F 		.ascii	"q15_t\000"
+ 2019      7400
+ 2020              	.LASF13:
+ 2021 023f 75696E74 		.ascii	"uint16_t\000"
+ 2021      31365F74 
+ 2021      00
+ 2022              	.LASF128:
+ 2023 0248 646F7562 		.ascii	"double\000"
+ 2023      6C6500
+ 2024              	.LASF87:
+ 2025 024f 5F637674 		.ascii	"_cvtbuf\000"
+ 2025      62756600 
+ 2026              	.LASF66:
+ 2027 0257 5F6F6666 		.ascii	"_offset\000"
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 39
+
+
+ 2027      73657400 
+ 2028              	.LASF116:
+ 2029 025f 5F6D6273 		.ascii	"_mbsrtowcs_state\000"
+ 2029      72746F77 
+ 2029      63735F73 
+ 2029      74617465 
+ 2029      00
+ 2030              	.LASF114:
+ 2031 0270 5F6D6272 		.ascii	"_mbrlen_state\000"
+ 2031      6C656E5F 
+ 2031      73746174 
+ 2031      6500
+ 2032              	.LASF44:
+ 2033 027e 5F666E61 		.ascii	"_fnargs\000"
+ 2033      72677300 
+ 2034              	.LASF50:
+ 2035 0286 5F666E73 		.ascii	"_fns\000"
+ 2035      00
+ 2036              	.LASF7:
+ 2037 028b 5F5F7569 		.ascii	"__uint32_t\000"
+ 2037      6E743332 
+ 2037      5F7400
+ 2038              	.LASF30:
+ 2039 0296 5F736967 		.ascii	"_sign\000"
+ 2039      6E00
+ 2040              	.LASF3:
+ 2041 029c 5F5F696E 		.ascii	"__int16_t\000"
+ 2041      7431365F 
+ 2041      7400
+ 2042              	.LASF75:
+ 2043 02a6 5F737464 		.ascii	"_stderr\000"
+ 2043      65727200 
+ 2044              	.LASF32:
+ 2045 02ae 5F426967 		.ascii	"_Bigint\000"
+ 2045      696E7400 
+ 2046              	.LASF105:
+ 2047 02b6 5F67616D 		.ascii	"_gamma_signgam\000"
+ 2047      6D615F73 
+ 2047      69676E67 
+ 2047      616D00
+ 2048              	.LASF59:
+ 2049 02c5 5F726561 		.ascii	"_read\000"
+ 2049      6400
+ 2050              	.LASF83:
+ 2051 02cb 5F726573 		.ascii	"_result_k\000"
+ 2051      756C745F 
+ 2051      6B00
+ 2052              	.LASF33:
+ 2053 02d5 5F5F746D 		.ascii	"__tm\000"
+ 2053      00
+ 2054              	.LASF138:
+ 2055 02da 7076436F 		.ascii	"pvCoeffs\000"
+ 2055      65666673 
+ 2055      00
+ 2056              	.LASF11:
+ 2057 02e3 756E7369 		.ascii	"unsigned int\000"
+ 2057      676E6564 
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 40
+
+
+ 2057      20696E74 
+ 2057      00
+ 2058              	.LASF21:
+ 2059 02f0 5F5F7763 		.ascii	"__wchb\000"
+ 2059      686200
+ 2060              	.LASF74:
+ 2061 02f7 5F737464 		.ascii	"_stdout\000"
+ 2061      6F757400 
+ 2062              	.LASF86:
+ 2063 02ff 5F637674 		.ascii	"_cvtlen\000"
+ 2063      6C656E00 
+ 2064              	.LASF8:
+ 2065 0307 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2065      20756E73 
+ 2065      69676E65 
+ 2065      6420696E 
+ 2065      7400
+ 2066              	.LASF56:
+ 2067 0319 5F66696C 		.ascii	"_file\000"
+ 2067      6500
+ 2068              	.LASF95:
+ 2069 031f 5F6E696F 		.ascii	"_niobs\000"
+ 2069      627300
+ 2070              	.LASF143:
+ 2071 0326 433A5C43 		.ascii	"C:\\ChibiStudio\\workspace_user\\disco_mungo\000"
+ 2071      68696269 
+ 2071      53747564 
+ 2071      696F5C77 
+ 2071      6F726B73 
+ 2072              	.LASF5:
+ 2073 0350 73686F72 		.ascii	"short unsigned int\000"
+ 2073      7420756E 
+ 2073      7369676E 
+ 2073      65642069 
+ 2073      6E7400
+ 2074              	.LASF89:
+ 2075 0363 5F617465 		.ascii	"_atexit0\000"
+ 2075      78697430 
+ 2075      00
+ 2076              	.LASF112:
+ 2077 036c 5F736967 		.ascii	"_signal_buf\000"
+ 2077      6E616C5F 
+ 2077      62756600 
+ 2078              	.LASF103:
+ 2079 0378 5F617363 		.ascii	"_asctime_buf\000"
+ 2079      74696D65 
+ 2079      5F627566 
+ 2079      00
+ 2080              	.LASF82:
+ 2081 0385 5F726573 		.ascii	"_result\000"
+ 2081      756C7400 
+ 2082              	.LASF20:
+ 2083 038d 5F5F7763 		.ascii	"__wch\000"
+ 2083      6800
+ 2084              	.LASF16:
+ 2085 0393 5F4C4F43 		.ascii	"_LOCK_T\000"
+ 2085      4B5F5400 
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 41
+
+
+ 2086              	.LASF19:
+ 2087 039b 77696E74 		.ascii	"wint_t\000"
+ 2087      5F7400
+ 2088              	.LASF68:
+ 2089 03a2 5F6C6F63 		.ascii	"_lock\000"
+ 2089      6B00
+ 2090              	.LASF145:
+ 2091 03a8 61726D5F 		.ascii	"arm_iir_lattice_init_q15\000"
+ 2091      6969725F 
+ 2091      6C617474 
+ 2091      6963655F 
+ 2091      696E6974 
+ 2092              	.LASF70:
+ 2093 03c1 5F666C61 		.ascii	"_flags2\000"
+ 2093      67733200 
+ 2094              	.LASF142:
+ 2095 03c9 4453502F 		.ascii	"DSP/FilteringFunctions/arm_iir_lattice_init_q15.c\000"
+ 2095      46696C74 
+ 2095      6572696E 
+ 2095      6746756E 
+ 2095      6374696F 
+ 2096              	.LASF60:
+ 2097 03fb 5F777269 		.ascii	"_write\000"
+ 2097      746500
+ 2098              	.LASF39:
+ 2099 0402 5F5F746D 		.ascii	"__tm_year\000"
+ 2099      5F796561 
+ 2099      7200
+ 2100              	.LASF135:
+ 2101 040c 6E756D53 		.ascii	"numStages\000"
+ 2101      74616765 
+ 2101      7300
+ 2102              	.LASF15:
+ 2103 0416 6C6F6E67 		.ascii	"long double\000"
+ 2103      20646F75 
+ 2103      626C6500 
+ 2104              	.LASF120:
+ 2105 0422 5F6E6578 		.ascii	"_nextf\000"
+ 2105      746600
+ 2106              	.LASF38:
+ 2107 0429 5F5F746D 		.ascii	"__tm_mon\000"
+ 2107      5F6D6F6E 
+ 2107      00
+ 2108              	.LASF48:
+ 2109 0432 5F617465 		.ascii	"_atexit\000"
+ 2109      78697400 
+ 2110              	.LASF139:
+ 2111 043a 61726D5F 		.ascii	"arm_iir_lattice_instance_q15\000"
+ 2111      6969725F 
+ 2111      6C617474 
+ 2111      6963655F 
+ 2111      696E7374 
+ 2112              	.LASF80:
+ 2113 0457 5F5F7364 		.ascii	"__sdidinit\000"
+ 2113      6964696E 
+ 2113      697400
+ 2114              	.LASF17:
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 42
+
+
+ 2115 0462 5F6F6666 		.ascii	"_off_t\000"
+ 2115      5F7400
+ 2116              	.LASF127:
+ 2117 0469 666C6F61 		.ascii	"float\000"
+ 2117      7400
+ 2118              	.LASF85:
+ 2119 046f 5F667265 		.ascii	"_freelist\000"
+ 2119      656C6973 
+ 2119      7400
+ 2120              	.LASF110:
+ 2121 0479 5F776374 		.ascii	"_wctomb_state\000"
+ 2121      6F6D625F 
+ 2121      73746174 
+ 2121      6500
+ 2122              	.LASF1:
+ 2123 0487 756E7369 		.ascii	"unsigned char\000"
+ 2123      676E6564 
+ 2123      20636861 
+ 2123      7200
+ 2124              	.LASF136:
+ 2125 0495 70537461 		.ascii	"pState\000"
+ 2125      746500
+ 2126              	.LASF88:
+ 2127 049c 5F6E6577 		.ascii	"_new\000"
+ 2127      00
+ 2128              	.LASF119:
+ 2129 04a1 5F685F65 		.ascii	"_h_errno\000"
+ 2129      72726E6F 
+ 2129      00
+ 2130              	.LASF2:
+ 2131 04aa 73686F72 		.ascii	"short int\000"
+ 2131      7420696E 
+ 2131      7400
+ 2132              	.LASF41:
+ 2133 04b4 5F5F746D 		.ascii	"__tm_yday\000"
+ 2133      5F796461 
+ 2133      7900
+ 2134              	.LASF51:
+ 2135 04be 5F5F7362 		.ascii	"__sbuf\000"
+ 2135      756600
+ 2136              	.LASF96:
+ 2137 04c5 5F696F62 		.ascii	"_iobs\000"
+ 2137      7300
+ 2138              	.LASF93:
+ 2139 04cb 5F5F4649 		.ascii	"__FILE\000"
+ 2139      4C4500
+ 2140              	.LASF24:
+ 2141 04d2 5F6D6273 		.ascii	"_mbstate_t\000"
+ 2141      74617465 
+ 2141      5F7400
+ 2142              	.LASF54:
+ 2143 04dd 5F5F7346 		.ascii	"__sFILE\000"
+ 2143      494C4500 
+ 2144              	.LASF69:
+ 2145 04e5 5F6D6273 		.ascii	"_mbstate\000"
+ 2145      74617465 
+ 2145      00
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 43
+
+
+ 2146              	.LASF106:
+ 2147 04ee 5F72616E 		.ascii	"_rand_next\000"
+ 2147      645F6E65 
+ 2147      787400
+ 2148              	.LASF108:
+ 2149 04f9 5F6D626C 		.ascii	"_mblen_state\000"
+ 2149      656E5F73 
+ 2149      74617465 
+ 2149      00
+ 2150              	.LASF76:
+ 2151 0506 5F696E63 		.ascii	"_inc\000"
+ 2151      00
+ 2152              	.LASF49:
+ 2153 050b 5F696E64 		.ascii	"_ind\000"
+ 2153      00
+ 2154              	.LASF79:
+ 2155 0510 5F6C6F63 		.ascii	"_locale\000"
+ 2155      616C6500 
+ 2156              	.LASF81:
+ 2157 0518 5F5F636C 		.ascii	"__cleanup\000"
+ 2157      65616E75 
+ 2157      7000
+ 2158              	.LASF78:
+ 2159 0522 5F756E73 		.ascii	"_unspecified_locale_info\000"
+ 2159      70656369 
+ 2159      66696564 
+ 2159      5F6C6F63 
+ 2159      616C655F 
+ 2160              	.LASF29:
+ 2161 053b 5F6D6178 		.ascii	"_maxwds\000"
+ 2161      77647300 
+ 2162              	.LASF71:
+ 2163 0543 5F726565 		.ascii	"_reent\000"
+ 2163      6E7400
+ 2164              	.LASF98:
+ 2165 054a 5F736565 		.ascii	"_seed\000"
+ 2165      6400
+ 2166              	.LASF22:
+ 2167 0550 5F5F636F 		.ascii	"__count\000"
+ 2167      756E7400 
+ 2168              	.LASF123:
+ 2169 0558 5F5F6C6F 		.ascii	"__lock\000"
+ 2169      636B00
+ 2170              	.LASF14:
+ 2171 055f 75696E74 		.ascii	"uint32_t\000"
+ 2171      33325F74 
+ 2171      00
+ 2172              	.LASF61:
+ 2173 0568 5F736565 		.ascii	"_seek\000"
+ 2173      6B00
+ 2174              	.LASF125:
+ 2175 056e 5F696D70 		.ascii	"_impure_ptr\000"
+ 2175      7572655F 
+ 2175      70747200 
+ 2176              	.LASF18:
+ 2177 057a 5F66706F 		.ascii	"_fpos_t\000"
+ 2177      735F7400 
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 44
+
+
+ 2178              	.LASF72:
+ 2179 0582 5F657272 		.ascii	"_errno\000"
+ 2179      6E6F00
+ 2180              	.LASF26:
+ 2181 0589 63686172 		.ascii	"char\000"
+ 2181      00
+ 2182              	.LASF35:
+ 2183 058e 5F5F746D 		.ascii	"__tm_min\000"
+ 2183      5F6D696E 
+ 2183      00
+ 2184              	.LASF4:
+ 2185 0597 5F5F7569 		.ascii	"__uint16_t\000"
+ 2185      6E743136 
+ 2185      5F7400
+ 2186              	.LASF99:
+ 2187 05a2 5F6D756C 		.ascii	"_mult\000"
+ 2187      7400
+ 2188              	.LASF28:
+ 2189 05a8 5F6E6578 		.ascii	"_next\000"
+ 2189      7400
+ 2190              	.LASF102:
+ 2191 05ae 5F737472 		.ascii	"_strtok_last\000"
+ 2191      746F6B5F 
+ 2191      6C617374 
+ 2191      00
+ 2192              	.LASF23:
+ 2193 05bb 5F5F7661 		.ascii	"__value\000"
+ 2193      6C756500 
+ 2194              	.LASF46:
+ 2195 05c3 5F666E74 		.ascii	"_fntypes\000"
+ 2195      79706573 
+ 2195      00
+ 2196              	.LASF100:
+ 2197 05cc 5F616464 		.ascii	"_add\000"
+ 2197      00
+ 2198              	.LASF27:
+ 2199 05d1 5F5F554C 		.ascii	"__ULong\000"
+ 2199      6F6E6700 
+ 2200              	.LASF113:
+ 2201 05d9 5F676574 		.ascii	"_getdate_err\000"
+ 2201      64617465 
+ 2201      5F657272 
+ 2201      00
+ 2202              	.LASF144:
+ 2203 05e6 5F5F6664 		.ascii	"__fdlibm_version\000"
+ 2203      6C69626D 
+ 2203      5F766572 
+ 2203      73696F6E 
+ 2203      00
+ 2204              	.LASF126:
+ 2205 05f7 5F676C6F 		.ascii	"_global_impure_ptr\000"
+ 2205      62616C5F 
+ 2205      696D7075 
+ 2205      72655F70 
+ 2205      747200
+ 2206              	.LASF140:
+ 2207 060a 626C6F63 		.ascii	"blockSize\000"
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 45
+
+
+ 2207      6B53697A 
+ 2207      6500
+ 2208              	.LASF129:
+ 2209 0614 5F5F6664 		.ascii	"__fdlibm_ieee\000"
+ 2209      6C69626D 
+ 2209      5F696565 
+ 2209      6500
+ 2210              	.LASF101:
+ 2211 0622 5F756E75 		.ascii	"_unused_rand\000"
+ 2211      7365645F 
+ 2211      72616E64 
+ 2211      00
+ 2212              	.LASF31:
+ 2213 062f 5F776473 		.ascii	"_wds\000"
+ 2213      00
+ 2214              	.LASF40:
+ 2215 0634 5F5F746D 		.ascii	"__tm_wday\000"
+ 2215      5F776461 
+ 2215      7900
+ 2216              	.LASF94:
+ 2217 063e 5F676C75 		.ascii	"_glue\000"
+ 2217      6500
+ 2218              	.LASF133:
+ 2219 0644 5F5F6664 		.ascii	"__fdlib_version\000"
+ 2219      6C69625F 
+ 2219      76657273 
+ 2219      696F6E00 
+ 2220              	.LASF121:
+ 2221 0654 5F6E6D61 		.ascii	"_nmalloc\000"
+ 2221      6C6C6F63 
+ 2221      00
+ 2222              	.LASF111:
+ 2223 065d 5F6C3634 		.ascii	"_l64a_buf\000"
+ 2223      615F6275 
+ 2223      6600
+ 2224              	.LASF90:
+ 2225 0667 5F736967 		.ascii	"_sig_func\000"
+ 2225      5F66756E 
+ 2225      6300
+ 2226              	.LASF25:
+ 2227 0671 5F666C6F 		.ascii	"_flock_t\000"
+ 2227      636B5F74 
+ 2227      00
+ 2228              	.LASF64:
+ 2229 067a 5F6E6275 		.ascii	"_nbuf\000"
+ 2229      6600
+ 2230              	.LASF122:
+ 2231 0680 5F756E75 		.ascii	"_unused\000"
+ 2231      73656400 
+ 2232              	.LASF42:
+ 2233 0688 5F5F746D 		.ascii	"__tm_isdst\000"
+ 2233      5F697364 
+ 2233      737400
+ 2234              	.LASF104:
+ 2235 0693 5F6C6F63 		.ascii	"_localtime_buf\000"
+ 2235      616C7469 
+ 2235      6D655F62 
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 46
+
+
+ 2235      756600
+ 2236              	.LASF62:
+ 2237 06a2 5F636C6F 		.ascii	"_close\000"
+ 2237      736500
+ 2238              	.LASF107:
+ 2239 06a9 5F723438 		.ascii	"_r48\000"
+ 2239      00
+ 2240              	.LASF109:
+ 2241 06ae 5F6D6274 		.ascii	"_mbtowc_state\000"
+ 2241      6F77635F 
+ 2241      73746174 
+ 2241      6500
+ 2242              	.LASF84:
+ 2243 06bc 5F703573 		.ascii	"_p5s\000"
+ 2243      00
+ 2244              	.LASF37:
+ 2245 06c1 5F5F746D 		.ascii	"__tm_mday\000"
+ 2245      5F6D6461 
+ 2245      7900
+ 2246              	.LASF137:
+ 2247 06cb 706B436F 		.ascii	"pkCoeffs\000"
+ 2247      65666673 
+ 2247      00
+ 2248              		.text
+ 2249              		.section	.gnu.lto_.profile.d9e73b1e,"e",%progbits
+ 2250 0000 789CE360 		.ascii	"x\234\343``\004B \000\000\000]\000\013"
+ 2250      60044220 
+ 2250      0000005D 
+ 2250      000B
+ 2251              		.text
+ 2252              		.section	.gnu.lto_.icf.d9e73b1e,"e",%progbits
+ 2253 0000 789CE360 		.ascii	"x\234\343``d\340`@\000F\206\337\247\357\035ad\000\000"
+ 2253      6064E060 
+ 2253      40004686 
+ 2253      DFA7EF1D 
+ 2253      61640000 
+ 2254 0014 1135037C 		.ascii	"\0215\003|"
+ 2255              		.text
+ 2256              		.section	.gnu.lto_.jmpfuncs.d9e73b1e,"e",%progbits
+ 2257 0000 789CE360 		.ascii	"x\234\343``d\010c@\000F\0066F0\260\257\237\317\314\000"
+ 2257      60640863 
+ 2257      40004606 
+ 2257      364630B0 
+ 2257      AF9FCFCC 
+ 2258 0015 C48C40CC 		.ascii	"\304\214@\314\204\204\231\331X\352X\200\352\016\260"
+ 2258      848499D9 
+ 2258      58EA5880 
+ 2258      EA0EB0
+ 2259 0024 303200F1 		.ascii	"02\000\361\177 \340g`b\324\222\206\013\201\215\201\262"
+ 2259      7F20E067 
+ 2259      6062D492 
+ 2259      860B818D 
+ 2259      81B2
+ 2260 0036 FF81A519 		.ascii	"\377\201\245\031\000@\273\025\006"
+ 2260      0040BB15 
+ 2260      06
+ 2261              		.text
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 47
+
+
+ 2262              		.section	.gnu.lto_.inline.d9e73b1e,"e",%progbits
+ 2263 0000 789CE360 		.ascii	"x\234\343``dpa@\000F\006\006\336\206\206\206\013L\351"
+ 2263      60647061 
+ 2263      40004606 
+ 2263      06DE8686 
+ 2263      860B4CE9 
+ 2264 0014 8C4C8C02 		.ascii	"\214L\214\002@\036\253\002\220`f\001\21250\24500p\201"
+ 2264      401EAB02 
+ 2264      90606601 
+ 2264      8A3530A5 
+ 2264      30307081 
+ 2265 0028 19A94C0C 		.ascii	"\031\251L\014L\01401\036\220>\026^ \301<\301\217\001"
+ 2265      4C0C3031 
+ 2265      1E903E16 
+ 2265      5E20C13C 
+ 2265      C18F01
+ 2266 003b 8800C4E5 		.ascii	"\210\000\304\345\014x"
+ 2266      0C78
+ 2267              		.text
+ 2268              		.section	.gnu.lto_.pureconst.d9e73b1e,"e",%progbits
+ 2269 0000 789CE360 		.ascii	"x\234\343``d`a`\000\222\263X\000\001\322\000\255"
+ 2269      60646061 
+ 2269      600092B3 
+ 2269      580001D2 
+ 2269      00AD
+ 2270              		.text
+ 2271              		.section	.gnu.lto_arm_iir_lattice_init_q15.d9e73b1e,"e",%progbits
+ 2272 0000 789CA594 		.ascii	"x\234\245\224_HSQ\034\307\317\357\236\355\356\3166\221"
+ 2272      5F485351 
+ 2272      1CC7CFEF 
+ 2272      9EEDEECE 
+ 2272      3691
+ 2273 0012 882244F2 		.ascii	"\210\"D\362A0{\360O$\3631(|\016\366\032\210\255)\027"
+ 2273      41307BF0 
+ 2273      4F24F331 
+ 2273      287C0EF6 
+ 2273      1A88AD29 
+ 2274 0027 759A5E23 		.ascii	"u\232^#z\361l\216\251)\346\203\346\037\034w\026\376"
+ 2274      7AF16C8E 
+ 2274      A929E683 
+ 2274      E61F1C77 
+ 2274      16FE
+ 2275 0039 81D214CA 		.ascii	"\201\322\024\312L+o.\265\231\231\231J\366`\224\"1B\211"
+ 2275      4C2B6F2E 
+ 2275      B5999999 
+ 2275      4AF66094 
+ 2275      22314289 
+ 2276 004d A022443B 		.ascii	"\240\"D;\347\334\033\012\332C5\270\227\337\357w\366"
+ 2276      E7DC1B0A 
+ 2276      DA4335B8 
+ 2276      97DFEF77 
+ 2276      F6
+ 2277 005e FD9CDFF7 		.ascii	"\375\234\337\367w\316&!@\212\011\241j\204P\002}\000"
+ 2277      77CE2621 
+ 2277      408A09A1 
+ 2277      6A845002 
+ 2277      7D00
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 48
+
+
+ 2278 0070 23100821 		.ascii	"#\020\010!\247-^I\000\340\021\221\000U\010P\001\327"
+ 2278      A72D5E49 
+ 2278      00E01191 
+ 2278      00550850 
+ 2278      01D7
+ 2279 0082 713386B1 		.ascii	"q3\206\261\252\265\207BJ7]!Z\363\342Q\322\243\201\212"
+ 2279      AAB58742 
+ 2279      4A375D21 
+ 2279      5AF3E251 
+ 2279      D2A3818A 
+ 2280 0096 116AA58F 		.ascii	"\021j\245\217\376\201aH\241\337[\366\005\177\330\352"
+ 2280      FE816148 
+ 2280      A1DF5BF6 
+ 2280      057FD8EA 
+ 2281 00a6 B18A014C 		.ascii	"\261\212\001L4m\234\272\027\211a\251\000\2114m\357\015"
+ 2281      346D9CBA 
+ 2281      178961A9 
+ 2281      0089346D 
+ 2281      EF0D
+ 2282 00b8 872C3813 		.ascii	"\207,8\023\020\215[\202\303=\220\334I\210\217hk]\326"
+ 2282      108D5B82 
+ 2282      C33D90DC 
+ 2282      49888F68 
+ 2282      6B5DD6
+ 2283 00cb 36A29954 		.ascii	"6\242\231T\214\3411`\012\205G\020\017#\020\217\020\255"
+ 2283      8CE13160 
+ 2283      0A854710 
+ 2283      0F23108F 
+ 2283      10AD
+ 2284 00dd 39AE1D42 		.ascii	"9\256\035B\360\004\222\251(0\3360b\327\361\002M;\026"
+ 2284      F00492A9 
+ 2284      2830DE30 
+ 2284      62D7F102 
+ 2284      4D3B16
+ 2285 00f0 667DA0E3 		.ascii	"f}\240\343\343hZ\343\237%f|\236\343?V7\0356\350\353"
+ 2285      E3685AE3 
+ 2285      9F25667C 
+ 2285      9EE33F56 
+ 2285      371D36E8 
+ 2286 0105 13B89568 		.ascii	"\023\270\225h\202\212M\360T\247k\224>\252\323M\216F"
+ 2286      828A4DF0 
+ 2286      54A76B94 
+ 2286      3EAAD34D 
+ 2286      8E46
+ 2287 0117 4A1FE3F4 		.ascii	"J\037\343\364\205\225\360\262\035\347q}W\257\272d1\000"
+ 2287      8595F0B2 
+ 2287      1DE7717D 
+ 2287      57AFBA64 
+ 2287      3100
+ 2288 0129 DF06B1DE 		.ascii	"\337\006\261\336\236\031\302{\3323;B\024\360\214\003"
+ 2288      9E19C27B 
+ 2288      DA333B42 
+ 2288      14F08C03 
+ 2289 0139 EEF7350C 		.ascii	"\356\3675\014\212\270\230\003:\276\254\274\305\006\340"
+ 2289      8AB89803 
+ 2289      3ABEACBC 
+ 2289      C506E0
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 49
+
+
+ 2290 0148 67172649 		.ascii	"g\027&IL>\276\217\374\016\225Op\371\246\377\373\015"
+ 2290      4C3EBE8F 
+ 2290      FC0E954F 
+ 2290      70F9A6FF 
+ 2290      FB0D
+ 2291 015a 2BBEC2E5 		.ascii	"+\276\302\345\341\325\371\301\337\343\031\3536\344\223"
+ 2291      E1D5F9C1 
+ 2291      DFE319EB 
+ 2291      36E493
+ 2292 0169 FBC887A8 		.ascii	"\373\310\207\250\3749\227\017lE\242\026\\\301\345\243"
+ 2292      FC39970F 
+ 2292      6C45A216 
+ 2292      5CC1E5A3 
+ 2293 0179 D59F564D 		.ascii	"\325\237VM\206|f\322h_\204\310\036\200\350xF\001S\220"
+ 2293      867C66D2 
+ 2293      685F84C8 
+ 2293      1E80E878 
+ 2293      46015390 
+ 2294 018d 8CF8D406 		.ascii	"\214\370\324\006\266\232\354\242\3118Wx\001\"\275)\010"
+ 2294      B69AECA2 
+ 2294      C9385778 
+ 2294      0122BD29 
+ 2294      08
+ 2295 019e DD9D336B 		.ascii	"\335\2353kdk\273\212h\213G\242yq@u\026\201\2750{\231"
+ 2295      646BBB8A 
+ 2295      688B47A2 
+ 2295      79714075 
+ 2295      1681BD30 
+ 2296 01b4 819D8E08 		.ascii	"\201\235\216\010l\212\022\260Q\304\000sd\003\306\265"
+ 2296      6C8A12B0 
+ 2296      51C40073 
+ 2296      6403C6B5 
+ 2297 01c4 036B0FA1 		.ascii	"\003k\017\241Z\214\330\3551\001\321\020\252\303\202"
+ 2297      5A8CD8ED 
+ 2297      3101D110 
+ 2297      AAC382
+ 2298 01d3 9E7869B2 		.ascii	"\236xi\262\006\344\346\327x\276Y\024|m\221\343,\244"
+ 2298      06E4E6D7 
+ 2298      78BE5914 
+ 2298      7C6D91E3 
+ 2298      2CA4
+ 2299 01e5 CDD4576E 		.ascii	"\315\324Wn,K\354t1\267\244\275\353_\212\355\204[^*\014"
+ 2299      2C4BEC74 
+ 2299      31B7A4BD 
+ 2299      EB5F8AED 
+ 2299      845B5E2A 
+ 2300 01fa 1D54B114 		.ascii	"\035T\261\024\244\023\231f.\350\242W}?$\246\3671h\""
+ 2300      A4139966 
+ 2300      2EE8A257 
+ 2300      7D3F24A6 
+ 2300      F7316822 
+ 2301 020e 3BE897D0 		.ascii	";\350\227\320\011-\272\211\031H\017b\221\357\262\275"
+ 2301      092DBA89 
+ 2301      19480F62 
+ 2301      91EFB2BD 
+ 2302 021e 6B9763C6 		.ascii	"k\227c\306.\177\2015\303+\216e#\201Y\206\2258\366v\035"
+ 2302      2E7F8135 
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 50
+
+
+ 2302      C32B8E65 
+ 2302      23815986 
+ 2302      9538F676 
+ 2303 0233 FE4FEE6B 		.ascii	"\376O\356k\316\025\030w\216qc8\367\301\016w\263\252"
+ 2303      CE151877 
+ 2303      8E716338 
+ 2303      F7C10E77 
+ 2303      B3AA
+ 2304 0245 C6CAE220 		.ascii	"\306\312\342 \006f&\012\225\355\001\320\013\002\257"
+ 2304      0666260A 
+ 2304      95ED01D0 
+ 2304      0B02AF
+ 2305 0254 D958AD3F 		.ascii	"\331X\255?\260t@/bZ\337\375{\261\200\000o\350\346\237"
+ 2305      B074402F 
+ 2305      625ADFFD 
+ 2305      7BB18000 
+ 2305      6FE8E69F 
+ 2306 0268 21108AE5 		.ascii	"!\020\212\345P\272\032\354\231\336\266\372\301\347\225"
+ 2306      50BA1AEC 
+ 2306      99DEB6FA 
+ 2306      C1E795
+ 2307 0277 546C6D65 		.ascii	"Tlme\266`\036\374\200\202\330\016'\342)D5\032\371`\333"
+ 2307      B6601EFC 
+ 2307      8082D80E 
+ 2307      27E22944 
+ 2307      351AF960 
+ 2308 028c F197F02F 		.ascii	"\361\227\360/\376\026\270?v\036\260\310\374\331\321"
+ 2308      FE16B83F 
+ 2308      761EB0C8 
+ 2308      FCD9D1
+ 2309 029b 3AF8421B 		.ascii	":\370B\033u\334\002\377\377\250\305\260s=\020:y\326"
+ 2309      75DC02FF 
+ 2309      FFA8C5B0 
+ 2309      733D103A 
+ 2309      79D6
+ 2310 02ad 792E2D5B 		.ascii	"y.-[.T\334\245\262'?\273\334\343R\344bOYZniQ\216,\227"
+ 2310      2E54DCA5 
+ 2310      B2273FBB 
+ 2310      DCE352E4 
+ 2310      624F595A 
+ 2311 02c7 E614E62A 		.ascii	"\346\024\346*\212\354r\347\310\036Y\311\271\224\221"
+ 2311      8AEC72E7 
+ 2311      C81E59C9 
+ 2311      B99491
+ 2312 02d6 99EA42E0 		.ascii	"\231\352B\340L\372\363j\252+\313\221u\312u1\003Y=\345"
+ 2312      4CFAF36A 
+ 2312      AA2BCB91 
+ 2312      75CA7531 
+ 2312      03593DE5 
+ 2313 02ea 454E2537 		.ascii	"EN%7\337]&\225\024\234)v\347\345\321\340\262\036\210"
+ 2313      DF5D2695 
+ 2313      149C2976 
+ 2313      E7E5D1E0 
+ 2313      B21E88
+ 2314 02fd 25744571 		.ascii	"%tEq[/\024\026\273\012\234\362U\367/\342q\224C"
+ 2314      5B2F1416 
+ 2314      BB0A9CF2 
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 51
+
+
+ 2314      55F72FE2 
+ 2314      719443
+ 2315              		.text
+ 2316              		.section	.gnu.lto_.symbol_nodes.d9e73b1e,"e",%progbits
+ 2317 0000 789CE360 		.ascii	"x\234\343``dpb\000\002\246v\306z\206\006 `a\234p\216"
+ 2317      60647062 
+ 2317      0002A676 
+ 2317      C67A8606 
+ 2317      2060619C 
+ 2318 0016 81A19E81 		.ascii	"\201\241\236\201aW\203#P\022\010\030;\030\353\031\377"
+ 2318      61578323 
+ 2318      50120818 
+ 2318      3B18EB19 
+ 2318      FF
+ 2319 0027 43813C58 		.ascii	"C\201<X\232\001\250\324\201\201\201\231\201\021\242"
+ 2319      9A01A8D4 
+ 2319      81818199 
+ 2319      8111A2
+ 2320 0036 E5091B03 		.ascii	"\345\011\033\003\000\313~\025f"
+ 2320      00CB7E15 
+ 2320      66
+ 2321              		.text
+ 2322              		.section	.gnu.lto_.refs.d9e73b1e,"e",%progbits
+ 2323 0000 789CE360 		.ascii	"x\234\343``\004B \000\000\000]\000\013"
+ 2323      60044220 
+ 2323      0000005D 
+ 2323      000B
+ 2324              		.text
+ 2325              		.section	.gnu.lto_.decls.d9e73b1e,"e",%progbits
+ 2326 0000 789C9555 		.ascii	"x\234\225U{LSW\030?_o_\224j\215\230i\342L\252!s\311"
+ 2326      7B4C5357 
+ 2326      183F5F6F 
+ 2326      5F946A8D 
+ 2326      9869E24C 
+ 2327 0018 0658E77C 		.ascii	"\006X\347|,\373\317\205\355\257e\211\331\022\027\222"
+ 2327      2CFBCF85 
+ 2327      EDAF6589 
+ 2327      D9121792 
+ 2328 0028 06CB05EE 		.ascii	"\006\313\005\356\244-\322[g\226l\271\324'*\014\235\217"
+ 2328      A42DD25B 
+ 2328      67966CB9 
+ 2328      D4272A0C 
+ 2328      9D8F
+ 2329 003a 882F449C 		.ascii	"\210/D\234S\243N&:\307S\230\017Pg\221\202\017\034TT"
+ 2329      53A34E26 
+ 2329      3AC75398 
+ 2329      0F506791 
+ 2329      820F1C54 
+ 2330 004f 1CA23287 		.ascii	"\034\2422\207\242N\241\373\3169\267\265\014\311\262"
+ 2330      A24EA1FB 
+ 2330      CE39B7B5 
+ 2330      0CC9B2
+ 2331 005e D37CF79C 		.ascii	"\323|\367\234\363;\337\343w\276\363\235S#\001\022c$"
+ 2331      F33BDFE3 
+ 2331      77BEF39D 
+ 2331      53230112 
+ 2331      6324
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 52
+
+
+ 2332 0070 A41C0829 		.ascii	"\244\034\010)&\204\204\260i\260oB\321\242\\F9\217r\032"
+ 2332      268484B0 
+ 2332      69B06F42 
+ 2332      D1A25C46 
+ 2332      398F721A 
+ 2333 0084 A58DF046 		.ascii	"\245\215\360F\327\273Q\006\310\360\326\214~b\261\317"
+ 2333      D7BB5106 
+ 2333      C8F0D68C 
+ 2333      7E62B1CF 
+ 2334 0094 44198B32 		.ascii	"D\031\2132\356\025>\246\242\264\242\014\242\274P\343"
+ 2334      EE153EA6 
+ 2334      A2B4A20C 
+ 2334      A2BC50E3 
+ 2335 00a4 5C42F1AB 		.ascii	"\\B\361\253q\233\377#\306f\001\332}\333\237\232\013"
+ 2335      719BFF23 
+ 2335      C66601DA 
+ 2335      7DDB9F9A 
+ 2335      0B
+ 2336 00b5 04186B02 		.ascii	"\004\030k\002-N74\036m0\341t\234\011\2548\255\011m\252"
+ 2336      2D4E3734 
+ 2336      1E6D30E1 
+ 2336      749C09AC 
+ 2336      38AD096D 
+ 2337 00ca D1F25523 		.ascii	"\321\362U#N[n\326\267\217\0224@\015\0377n\010\214\306"
+ 2337      4E5B6ED6 
+ 2337      B78F1234 
+ 2337      400D1F37 
+ 2337      6E088CC6 
+ 2338 00de A5092608 		.ascii	"\245\011&\010\205\000\201P\211\257\333\300\001E\371"
+ 2338      85008150 
+ 2338      89AFDBC0 
+ 2338      0145F9
+ 2339 00ed 0681BCC1 		.ascii	"\006\201\274\301\201<\203\020\313\264K\352\372Z-I\007"
+ 2339      813C8310 
+ 2339      CBB44BEA 
+ 2339      FA5A2D49 
+ 2339      07
+ 2340 00fe 15DE8C5F 		.ascii	"\025\336\214_\023\250\005\201qH\216\245\353\301\222"
+ 2340      13A80581 
+ 2340      71488EA5 
+ 2340      EBC192
+ 2341 010d B2E36661 		.ascii	"\262\343fa!\323]q\252\260b\024\017\252\301\351\256\026"
+ 2341      21D35D71 
+ 2341      AAB06214 
+ 2341      0FAAC1E9 
+ 2341      AE16
+ 2342 011f BF0F38A5 		.ascii	"\277\0178\24518\365U\034\363[L\253\250\233\302\245\212"
+ 2342      3138F555 
+ 2342      1CF35B4C 
+ 2342      ABA89BC2 
+ 2342      A58A
+ 2343 0131 EE4D02BF 		.ascii	"\356M\002\277\302D\250\207\211\004\352\200E?\011IP\203"
+ 2343      C244A887 
+ 2343      8904EA80 
+ 2343      453F0949 
+ 2343      5083
+ 2344 0143 58356268 		.ascii	"X5bhP\267;\030\320\233W+\212O)^\252\304|\004\247\300"
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 53
+
+
+ 2344      50B73B18 
+ 2344      D09B572B 
+ 2344      8A4F295E 
+ 2344      AAC47C04 
+ 2345 0159 0415B8FE 		.ascii	"\004\025\270\376\013\256\0238\015f\236\211\027\313\236"
+ 2345      0BAE1338 
+ 2345      0D669E89 
+ 2345      17CB9E
+ 2346 0168 6C8A1116 		.ascii	"l\212\021\0261\012y\313\374\212NX\302\306\273\313\017"
+ 2346      310A79CB 
+ 2346      FC8A4E58 
+ 2346      C2C6BBCB 
+ 2346      0F
+ 2347 0179 FE60C1F8 		.ascii	"\376`\301\370o\320\215\012\010\234\351\275\037\000\016"
+ 2347      6FD08D0A 
+ 2347      089CE9BD 
+ 2347      1F000E
+ 2348 0188 D0F5EA75 		.ascii	"\320\365\352um]&\301\007l\322\264\353\361*\306\3167"
+ 2348      6D5D26C1 
+ 2348      076CD2B4 
+ 2348      EBF12AC6 
+ 2348      CE37
+ 2349 019a 8CDD3960 		.ascii	"\214\3359`&\224]#b\015\234]xwc\371\356\016\206\356l"
+ 2349      26945D23 
+ 2349      620D9C5D 
+ 2349      787763F9 
+ 2349      EE0E86EE 
+ 2350 01af B5F0CD2A 		.ascii	"\265\360\315*4\251\345\207\012\217\351\2055\314\271"
+ 2350      34A9E587 
+ 2350      0A8FE985 
+ 2350      35CCB9
+ 2351 01be EE4ACFB3 		.ascii	"\356J\317\263k\006\210\307\026WB#\324\336\331\377~\325"
+ 2351      6B0688C7 
+ 2351      16574223 
+ 2351      D4DED9FF 
+ 2351      7ED5
+ 2352 01d0 B72BF395 		.ascii	"\267+\363\225b\237@\367\001U\030\"\000qQ\273\253d_\033"
+ 2352      629F40F7 
+ 2352      01551822 
+ 2352      007151BB 
+ 2352      AB645F1B 
+ 2353 01e4 7EB8455D 		.ascii	"~\270E]\265\245H\251]\246g\352\027GP\257\200\210\376"
+ 2353      B5A548A9 
+ 2353      5DA667EA 
+ 2353      174750AF 
+ 2353      8088FE
+ 2354 01f7 832ACB8E 		.ascii	"\203*\313\2162EYn\206\363\230\265\263\252AxO\004\222"
+ 2354      3245596E 
+ 2354      86F398B5 
+ 2354      B3AA4178 
+ 2354      4F0492
+ 2355 020a 86BAEFAF 		.ascii	"\206\272\357\257\262l;\252(yf\346\377\3140\377I\021"
+ 2355      B26C3BAA 
+ 2355      287966E6 
+ 2355      FFCC30FF 
+ 2355      4911
+ 2356 021c F7EBD801 		.ascii	"\367\353\330\001\242\200\226\300o\250p\201)Pu\232\241"
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 54
+
+
+ 2356      A28096C0 
+ 2356      6FA87081 
+ 2356      2950759A 
+ 2356      A1
+ 2357 022d 4B100FCD 		.ascii	"K\020\017\315(~\224&\210W\213\365\310\265\016\254\250"
+ 2357      287E9426 
+ 2357      88578BF5 
+ 2357      C8B50EAC 
+ 2357      A8
+ 2358 023e 529EEAB6 		.ascii	"R\236\352\266\336\262\207\272\270W\372\201\0265\362"
+ 2358      DEB287BA 
+ 2358      B857FA81 
+ 2358      1635F2
+ 2359 024d C8AE9A7B 		.ascii	"\310\256\232{n\355\203\350\252h\035B\3642\253\012\332"
+ 2359      6EED83E8 
+ 2359      AA681D42 
+ 2359      F432AB0A 
+ 2359      DA
+ 2360 025e A16EE58A 		.ascii	"\241n\345\212\201jZ\331Si\005\204B\226\250\032\230\312"
+ 2360      816A5AD9 
+ 2360      53690584 
+ 2360      4296A81A 
+ 2360      98CA
+ 2361 0270 6B605FE9 		.ascii	"k`_\351\272\022\275p\222\023+\012\036\330e\3465\300"
+ 2361      BA12BD70 
+ 2361      92132B0A 
+ 2361      1ED865E6 
+ 2361      35C0
+ 2362 0282 5C93885F 		.ascii	"\\\223\210_\270\006\314\204\322\272\212\330\025\212"
+ 2362      B806CC84 
+ 2362      D2BA8AD8 
+ 2362      158A
+ 2363 0290 B581098D 		.ascii	"\265\201\011\215\016\335*\377\342\006t\000\275\256\000"
+ 2363      0EDD2AFF 
+ 2363      E2067400 
+ 2363      BDAE00
+ 2364 029f 450620F4 		.ascii	"E\006 \364G?@\031\263\036\350\230J(\334\2006\246\247"
+ 2364      473F4019 
+ 2364      B31EE898 
+ 2364      4A28DC80 
+ 2364      36A6A7
+ 2365 02b2 51D5A902 		.ascii	"Q\325\251\002\307x\027\376pL\243z\321\250\017\000p\033"
+ 2365      C77817FE 
+ 2365      704CA37A 
+ 2365      D1A80F00 
+ 2365      701B
+ 2366 02c4 EE9D4DA3 		.ascii	"\356\235M\243\\\363uP\327\303N\270\001g\365\322P\205"
+ 2366      5CF37550 
+ 2366      D7C34EB8 
+ 2366      0167F5D2 
+ 2366      5085
+ 2367 02d6 346AB868 		.ascii	"4j\270h\013\030\306\370\245C\022q\252\222!\020y\231"
+ 2367      0B18C6F8 
+ 2367      A5431271 
+ 2367      AA922110 
+ 2367      7999
+ 2368 02e8 4281BAB3 		.ascii	"B\201\272\2631\235\020\314\305\303\015\366\335\233D"
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 55
+
+
+ 2368      319D10CC 
+ 2368      C5C30DF6 
+ 2368      DD9B44
+ 2369 02f7 6074A195 		.ascii	"`t\241\225\260\014\237+=\325\023+t\361tw\265\027\264"
+ 2369      B00C9F2B 
+ 2369      3DD5132B 
+ 2369      74F17477 
+ 2369      B517B4
+ 2370 030a E9B4B823 		.ascii	"\351\264\270#\232I\360j)V\372\374\366*=\303h\035v\000"
+ 2370      9A49F06A 
+ 2370      2956FAFC 
+ 2370      F62A3DC3 
+ 2370      681D7600 
+ 2371 031e 037BD6EE 		.ascii	"\003{\326\356\013\230#`\220\203\305\335\333\267\305"
+ 2371      0B982360 
+ 2371      9083C5DD 
+ 2371      DBB7C5
+ 2372 032d 46C01B1C 		.ascii	"F\300\033\034\314\375\271\260(\206\201\264\352;9\330"
+ 2372      CCFDB9B0 
+ 2372      288681B4 
+ 2372      EA3B39D8 
+ 2373 033d B6FC4801 		.ascii	"\266\374H\001\360z\243-\234\201[\274\314T\322\005G7"
+ 2373      F07AA32D 
+ 2373      9C815BBC 
+ 2373      CC54D205 
+ 2373      4737
+ 2374 034f AE8DFDB7 		.ascii	"\256\215\375\267\022+\307\241z{r{\2125\321\345w{H\371"
+ 2374      122BC7A1 
+ 2374      7A7B727B 
+ 2374      8A35D1E5 
+ 2374      777B48F9 
+ 2375 0363 75851FA5 		.ascii	"u\205\037\245\246{W\367k\030\023\204\340&g\322\177&"
+ 2375      A67B57F7 
+ 2375      6B181384 
+ 2375      E02667D2 
+ 2375      7F26
+ 2376 0375 FF8879FC 		.ascii	"\377\210y\374F\365\011\034\243\201\314\327\242\256\344"
+ 2376      46F5091C 
+ 2376      A381CCD7 
+ 2376      A2AEE4
+ 2377 0384 1F309EC0 		.ascii	"\0370\236\300\035\320\252\357{o\343v\230R\254\004\203"
+ 2377      1DD0AAEF 
+ 2377      7B6FE376 
+ 2377      9852AC04 
+ 2377      83
+ 2378 0395 4A6DA8E6 		.ascii	"Jm\250\346\355.\274\235\313\321NK\325\240\035y\251\234"
+ 2378      ED2EBC9D 
+ 2378      CBD14E4B 
+ 2378      D5A01D79 
+ 2378      A99C
+ 2379 03a7 E898C0EF 		.ascii	"\350\230\300\357\270Y\270\216iH\036\214#\320\015S\320"
+ 2379      B859B88E 
+ 2379      69481E8C 
+ 2379      23D00D53 
+ 2379      D0
+ 2380 03b8 C3E1E395 		.ascii	"\303\341\343\225\371:\241\214\277\372\027\016w\257\321"
+ 2380      F93AA18C 
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 56
+
+
+ 2380      BFFA170E 
+ 2380      77AFD1
+ 2381 03c7 0B27F8E4 		.ascii	"\013'\370\344\307\255]\215\006$\007=\354-\247Hn\355"
+ 2381      C7AD5D8D 
+ 2381      0624073D 
+ 2381      EC2DA748 
+ 2381      6EED
+ 2382 03d9 DE514235 		.ascii	"\336QB5_.\331\263\343\022\315\"\334\247\256\357q\356"
+ 2382      5F2ED9B3 
+ 2382      E312CD22 
+ 2382      DCA7AEEF 
+ 2382      71EE
+ 2383 03eb E1BB347F 		.ascii	"\341\2734\177\370]\232\317\357R\351\263^\374+8\315}"
+ 2383      F85D9ACF 
+ 2383      EF52E9B3 
+ 2383      5EFC2B38 
+ 2383      CD7D
+ 2384 03fd B4F46E5E 		.ascii	"\264\364n^\251y\365]z\010\314\204\336\245?\021\353\345"
+ 2384      A979F55D 
+ 2384      7A08CC84 
+ 2384      DEA53F11 
+ 2384      EBE5
+ 2385 040f EFE98943 		.ascii	"\357\351\211C\033[\005\226\260\277\"\325\320\264w\375"
+ 2385      1B5B0596 
+ 2385      B0BF22D5 
+ 2385      D0B477FD 
+ 2386 041f 6E9EC4CF 		.ascii	"n\236\304\317M\320\307y\254\177P\331`bX\206\031\036"
+ 2386      4DD0C779 
+ 2386      AC7F50D9 
+ 2386      60625886 
+ 2386      191E
+ 2387 0431 71AC75E9 		.ascii	"q\254u\351\332\376\321\223/hv*F\266\233\252-\335?i\231"
+ 2387      DAFED193 
+ 2387      2F68762A 
+ 2387      46B69BAA 
+ 2387      2DDD3F69 
+ 2388 0446 4E3F4C66 		.ascii	"N?LfH\177g\376w\006\341\"\347\366pg\337\367\264\310"
+ 2388      487F67FE 
+ 2388      7706E122 
+ 2388      E7F67067 
+ 2388      DFF7B4C8 
+ 2389 045a E0293279 		.ascii	"\340)2yB\023\216\340\243\353[*u\302e\256q`s\251\237"
+ 2389      42138EE0 
+ 2389      A3EB5B2A 
+ 2389      75C265AE 
+ 2389      716073A9 
+ 2390 046f 25E86F9A 		.ascii	"%\350o\232\201g<JG\347\352\200!\372\364\220\200zz\360"
+ 2390      81673C4A 
+ 2390      47E7EA80 
+ 2390      21FAF490 
+ 2390      807A7AF0 
+ 2391 0483 9CBE622F 		.ascii	"\234\276b/\350\001>\016\037\340\246\206\201v\023=\300"
+ 2391      E8013E0E 
+ 2391      1FE0A686 
+ 2391      8176133D 
+ 2391      C0
+ 2392 0494 623CC0B6 		.ascii	"b<\300\26676\324\257\250\365+\212pv\022\325\203\273"
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 57
+
+
+ 2392      3736D4AF 
+ 2392      A8F52B8A 
+ 2392      707612D5 
+ 2392      83BB
+ 2393 04a6 E1138407 		.ascii	"\341\023\204\007\324\364\256\372\247\012\003\354\350"
+ 2393      D4F4AEFA 
+ 2393      A70A03EC 
+ 2393      E8
+ 2394 04b3 06CED79F 		.ascii	"\006\316\327\237\210\215\2562j\362\262\312\006\371#"
+ 2394      888DAE32 
+ 2394      6AF2B2CA 
+ 2394      06F923
+ 2395 04c2 473B63F6 		.ascii	"G;c\366\302\271n1=\335c\373`\336'I\311R\226,\346H\256"
+ 2395      C2B96E31 
+ 2395      3DDD63FB 
+ 2395      60DE2749 
+ 2395      C952962C 
+ 2396 04d9 8C64AFCB 		.ascii	"\214d\257\313!Kn\227')5\307i\227\244\034{V\252,K\016"
+ 2396      214B6E97 
+ 2396      272935C7 
+ 2396      6997A41C 
+ 2396      7B56AA2C 
+ 2397 04ef D12EB924 		.ascii	"\321.\271$\331\276\310\366n\242\303\370\341\307\237"
+ 2397      D9BEC8F6 
+ 2397      6EA2C3F8 
+ 2397      E1C79F
+ 2398 04fe 5AE7DA66 		.ascii	"Z\347\332f\221\370\221u\022\035\263g\315\236\341H\263"
+ 2398      91F89175 
+ 2398      121DB367 
+ 2398      CD9EE148 
+ 2398      B3
+ 2399 050f 111DCEED 		.ascii	"\021\035\316\355\262>{\236\234*\2131.\257\023\007\031"
+ 2399      B23E7B9E 
+ 2399      9C2A8B31 
+ 2399      2EAF1307 
+ 2399      19
+ 2400 0520 A2C7E895 		.ascii	"\242\307\350\225\\\262m\246]6f/\346D,\222\313\301\242"
+ 2400      5CB26DA6 
+ 2400      5D36662F 
+ 2400      E6442C92 
+ 2400      CBC1A2
+ 2401 0533 3A53E5CC 		.ascii	":S\345\314\304L\362\372p\357\0369\325\205\003\364\310"
+ 2401      C44CF2FA 
+ 2401      70EF1E39 
+ 2401      D58503F4 
+ 2401      C8
+ 2402 0544 CCDF996E 		.ascii	"\314\337\231n\227\005\333LbF\315\305\263\304\004\347"
+ 2402      9705DB4C 
+ 2402      6246CDC5 
+ 2402      B3C404E7 
+ 2403 0554 5BE9D9C4 		.ascii	"[\351\331\304\344p\347\310\342\222\004\347\0142a$~\323"
+ 2403      E470E7C8 
+ 2403      E29204E7 
+ 2403      0C326124 
+ 2403      7ED3
+ 2404 0566 FFF79E89 		.ascii	"\377\367\236\211\336):=\242\254\315\022S\323\015.\267"
+ 2404      DE293A3D 
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 58
+
+
+ 2404      A2ACCD12 
+ 2404      53D30D2E 
+ 2404      B7
+ 2405 0577 9C99E3FE 		.ascii	"\234\231\343\376R\357\221\276\022\3552\330\014\351."
+ 2405      52EF91BE 
+ 2405      12ED32D8 
+ 2405      0CE92E
+ 2406 0586 AB275B74 		.ascii	"\253'[t\340\202\313\345\315\312\372\314\361^\212#SZ"
+ 2406      E082CBE5 
+ 2406      CDCAFACC 
+ 2406      F15E8A23 
+ 2406      535A
+ 2407 0598 2079646F 		.ascii	" ydo\232\344N\221\335\356,OJ\206\313ke#+\306\261\212"
+ 2407      9AE44E91 
+ 2407      DDEE2C4F 
+ 2407      4A86CB6B 
+ 2407      65232BC6 
+ 2408 05ae CE05625A 		.ascii	"\316\005bZ\232\230\2262'q\232u\3724\333\234E3R\020O"
+ 2408      9A989632 
+ 2408      27719A75 
+ 2408      FA34DB9C 
+ 2408      45335210 
+ 2409 05c3 40176282 		.ascii	"@\027b\202\230\272@J\301|dy\323\304\024\217LYbF\376"
+ 2409      98BA404A 
+ 2409      C17C6479 
+ 2409      D3C4148F 
+ 2409      4C596246 
+ 2410 05d8 0163A0E4 		.ascii	"\001c\240\344\314"
+ 2410      CC
+ 2411              		.text
+ 2412              		.section	.gnu.lto_.symtab.d9e73b1e,"e",%progbits
+ 2413 0000 61726D5F 		.ascii	"arm_iir_lattice_init_q15\000"
+ 2413      6969725F 
+ 2413      6C617474 
+ 2413      6963655F 
+ 2413      696E6974 
+ 2414 0019 00       		.ascii	"\000"
+ 2415 001a 00       		.ascii	"\000"
+ 2416 001b 00       		.ascii	"\000"
+ 2417 001c 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
+ 2417      00000000 
+ 2418 0024 E9000000 		.ascii	"\351\000\000\000"
+ 2419              		.text
+ 2420              		.section	.gnu.lto_.opts,"e",%progbits
+ 2421 0000 272D666E 		.ascii	"'-fno-openmp' '-fno-openacc' '-fno-pie' '-mcpu=cort"
+ 2421      6F2D6F70 
+ 2421      656E6D70 
+ 2421      2720272D 
+ 2421      666E6F2D 
+ 2422 0033 65782D6D 		.ascii	"ex-m4' '-mthumb' '-mfloat-abi=hard' '-mfpu=fpv4-sp-"
+ 2422      34272027 
+ 2422      2D6D7468 
+ 2422      756D6227 
+ 2422      20272D6D 
+ 2423 0066 64313627 		.ascii	"d16' '-march=armv7e-m+fp' '-O2' '-fomit-frame-point"
+ 2423      20272D6D 
+ 2423      61726368 
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 59
+
+
+ 2423      3D61726D 
+ 2423      7637652D 
+ 2424 0099 65722720 		.ascii	"er' '-falign-functions=16' '-ffunction-sections' '-"
+ 2424      272D6661 
+ 2424      6C69676E 
+ 2424      2D66756E 
+ 2424      6374696F 
+ 2425 00cc 66646174 		.ascii	"fdata-sections' '-fno-common' '-flto'\000"
+ 2425      612D7365 
+ 2425      6374696F 
+ 2425      6E732720 
+ 2425      272D666E 
+ 2426              		.text
+ 2427              		.comm	__gnu_lto_v1,1,1
+ 2428              		.comm	__gnu_lto_slim,1,1
+ 2429              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 9-2019-q4-major) 9.2.1 20191025 (release) [ARM
+ARM GAS  C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s 			page 60
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 arm_iir_lattice_init_q15.c
+C:\Users\omwfo\AppData\Local\Temp\ccSz3fwa.s:27     .gnu.debuglto_.debug_info:00000000 arm_iir_lattice_init_q15.c.c8784cd1
+                            *COM*:00000001 __gnu_lto_v1
+                            *COM*:00000001 __gnu_lto_slim
+
+NO UNDEFINED SYMBOLS

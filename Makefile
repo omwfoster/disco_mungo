@@ -112,6 +112,7 @@ include $(CHIBIOS)/os/rt/rt.mk
 include $(CHIBIOS)/os/common/ports/ARMCMx/compilers/GCC/mk/port_v7m.mk
 # Auto-build files in ./source recursively.
 include $(CHIBIOS)/tools/mk/autobuild.mk
+include DSP/dsp.mk
 # Other files (optional).
 #include $(CHIBIOS)/test/lib/test.mk
 #include $(CHIBIOS)/test/rt/rt_test.mk
@@ -124,6 +125,7 @@ LDSCRIPT= $(STARTUPLD)/STM32F407xG.ld
 # setting.
 CSRC = $(ALLCSRC) \
        $(TESTSRC) \
+       $(DSPSRC) \
        debug.c \
        autogen_fir_coeffs.c \
        mp45dt02_pdm.c \
@@ -140,7 +142,7 @@ ASMSRC = $(ALLASMSRC)
 ASMXSRC = $(ALLXASMSRC)
 
 # Inclusion directories.
-INCDIR = $(CONFDIR) $(ALLINC) $(TESTINC) $(DRIVERS) $(INC)
+INCDIR = $(CONFDIR) $(ALLINC) $(TESTINC) $(DRIVERS) $(DSPINC)
 
 # Define C warning options here.
 CWARN = -Wall -Wextra -Wundef -Wstrict-prototypes

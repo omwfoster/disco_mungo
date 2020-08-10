@@ -1,5 +1,5 @@
 /*******************************************************************************
-* Copyright (c) 2017, Alan Barr
+* Copyright (c) 2016, Alan Barr
 * All rights reserved.
 *
 * Redistribution and use in source and binary forms, with or without
@@ -23,38 +23,12 @@
 * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 *******************************************************************************/
-#include "ch.h"
-#include "hal.h"
-#include "chprintf.h"
 #include "debug.h"
+#include "chprintf.h"
 
 #define SERIAL_PRINT_DRIVER SD1
 
-mutex_t serialPrintMtx;
-
-static const char *statusCodeString[] = {
-    "STATUS_OK",
-    "STATUS_ERROR_API",
-    "STATUS_ERROR_CALLBACK",
-    "STATUS_ERROR_INTERNAL",
-    "STATUS_ERROR_EXTERNAL_INPUT",
-    "STATUS_ERROR_OS",
-    "STATUS_ERROR_LIBRARY",
-    "STATUS_ERROR_LIBRARY_LWIP",
-    "STATUS_ERROR_HW",
-    "STATUS_ERROR_TIMEOUT",
-    "STATUS_CODE_ENUM_MAX"
-};
-
-const char* statusCodeToString(StatusCode code)
-{
-    if (code > (STATUS_CODE_ENUM_MAX))
-    {
-        return "UNKNOWN STATUS CODE";
-    }
- 
-    return statusCodeString[code];
-}
+static mutex_t serialPrintMtx;
 
 void debugInit(void)
 {
@@ -70,47 +44,19 @@ void debugShutdown(void)
     sdStop(&SERIAL_PRINT_DRIVER);
 }
 
-void debugSerialPrintVa(const char *fmt, va_list argList)
+void debugSerialPrint(const char * fmt, ...)
 {
+/*    va_list ap;
+    va_start(ap, fmt);
     chMtxLock(&serialPrintMtx);
-    chvprintf((BaseSequentialStream*)&SERIAL_PRINT_DRIVER, fmt, argList);
+    chvprintf((BaseSequentialStream*)&SERIAL_PRINT_DRIVER, fmt, ap);
     chMtxUnlock(&serialPrintMtx);
-}
-
-void debugSerialPrint(const char *fmt, ...)
-{
-    va_list argList;
-    va_start(argList, fmt);
-    debugSerialPrintVa(fmt, argList);
-    va_end(argList);
+    va_end(ap);*/
 }
 
 void HardFault_Handler(void) 
 {
-    BOARD_LED_RED_SET();
+    LED_RED_SET();
     while (true);
 }
 
-void MemManage_Handler(void) 
-{
-    BOARD_LED_RED_SET();
-    while (true);
-}
-
-void BusFault_Handler(void) 
-{
-    BOARD_LED_RED_SET();
-    while (true);
-}
-
-void UsageFault_Handler(void) 
-{
-    BOARD_LED_RED_SET();
-    while (true);
-}
-
-void DebugMon_Handler(void) 
-{
-    BOARD_LED_RED_SET();
-    while (true);
-}
