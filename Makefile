@@ -35,7 +35,7 @@ endif
 
 # Enable this if you want to see the full log while compiling.
 ifeq ($(USE_VERBOSE_COMPILE),)
-  USE_VERBOSE_COMPILE = yes
+  USE_VERBOSE_COMPILE = no
 endif
 
 # If enabled, this option makes the build process faster by not compiling
@@ -96,6 +96,7 @@ DEPDIR   := ./.dep
 DRIVERS := ./drivers
 INC := ./inc
 DSP := ./DSP
+PDM2PCM := lib
 
 # Licensing files.
 include $(CHIBIOS)/os/license/license.mk
@@ -168,10 +169,10 @@ UADEFS =
 UINCDIR = 
 
 # List the user directory to look for the libraries here
-ULIBDIR =
+ULIBDIR = lib
 
 # List all user libraries here
-ULIBS =
+ULIBS = -lm -lpdm2pcm_glo -larm_cortexM4lf_math
 
 #
 # End of user section

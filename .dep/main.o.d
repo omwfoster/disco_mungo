@@ -110,8 +110,8 @@ build/obj/main.o: main.c ../../chibios203/os/rt/include/ch.h cfg/chconf.h \
  ../../chibios203/os/hal/include/hal_st.h \
  ../../chibios203/os/hal/ports/STM32/LLD/TIMv1/hal_st_lld.h \
  ../../chibios203/os/hal/include/hal_mmc_spi.h \
- ../../chibios203/os/hal/include/hal_serial_usb.h debug.h \
- autogen_fir_coeffs.h inc/arm_math.h inc/core_cm4.h \
+ ../../chibios203/os/hal/include/hal_serial_usb.h debug.h inc/arm_math.h \
+ inc/core_cm4.h \
  c:\chibistudio\tools\gnu\ tools\ arm\ embedded\9.0\ 2019q4\arm-none-eabi\include\string.h \
  c:\chibistudio\tools\gnu\ tools\ arm\ embedded\9.0\ 2019q4\arm-none-eabi\include\_ansi.h \
  c:\chibistudio\tools\gnu\ tools\ arm\ embedded\9.0\ 2019q4\arm-none-eabi\include\newlib.h \
@@ -127,7 +127,7 @@ build/obj/main.o: main.c ../../chibios203/os/rt/include/ch.h cfg/chconf.h \
  c:\chibistudio\tools\gnu\ tools\ arm\ embedded\9.0\ 2019q4\arm-none-eabi\include\strings.h \
  c:\chibistudio\tools\gnu\ tools\ arm\ embedded\9.0\ 2019q4\arm-none-eabi\include\sys\string.h \
  c:\chibistudio\tools\gnu\ tools\ arm\ embedded\9.0\ 2019q4\arm-none-eabi\include\math.h \
- mp45dt02_pdm.h
+ autogen_fir_coeffs.h inc/arm_math.h mp45dt02_pdm.h pdm2pcm_glo.h
 
 ../../chibios203/os/rt/include/ch.h:
 
@@ -363,8 +363,6 @@ cfg/mcuconf.h:
 
 debug.h:
 
-autogen_fir_coeffs.h:
-
 inc/arm_math.h:
 
 inc/core_cm4.h:
@@ -399,4 +397,10 @@ c:\chibistudio\tools\gnu\ tools\ arm\ embedded\9.0\ 2019q4\arm-none-eabi\include
 
 c:\chibistudio\tools\gnu\ tools\ arm\ embedded\9.0\ 2019q4\arm-none-eabi\include\math.h:
 
+autogen_fir_coeffs.h:
+
+inc/arm_math.h:
+
 mp45dt02_pdm.h:
+
+pdm2pcm_glo.h:
